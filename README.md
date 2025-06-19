@@ -1,6 +1,6 @@
 # 💸 Hub Monetization Insights
 
-This project simulates an end-to-end monetization analytics stack for a B2B SaaS company like HubSpot. It includes synthetic quote-to-cash data, pricing elasticity models, competitive pricing benchmarks, and an executive-facing dashboard.
+This project simulates an end-to-end monetization analytics stack for a B2B SaaS company. It includes synthetic quote-to-cash data, pricing elasticity models, competitive pricing benchmarks, and an executive-facing dashboard.
 
 ---
 
