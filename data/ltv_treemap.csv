@@ -1,0 +1,16 @@
+hub,tier,avg_ltv
+CMS Hub,Enterprise,12397.190121951218
+CMS Hub,Professional,4182.407016129033
+CMS Hub,Starter,591.6025837320574
+Marketing Hub,Enterprise,11513.282105263157
+Marketing Hub,Professional,4242.331171171171
+Marketing Hub,Starter,768.2264485981308
+Ops Hub,Enterprise,12778.60723076923
+Ops Hub,Professional,4353.657826086956
+Ops Hub,Starter,530.1168867924529
+Sales Hub,Enterprise,11837.535789473684
+Sales Hub,Professional,4283.290561797753
+Sales Hub,Starter,542.9325615763547
+Service Hub,Enterprise,12179.780135135135
+Service Hub,Professional,3953.349230769231
+Service Hub,Starter,581.5620812182741

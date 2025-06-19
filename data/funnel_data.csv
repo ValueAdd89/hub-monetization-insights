@@ -1,0 +1,21 @@
+hub,stage,count
+CMS Hub,Paid,163
+CMS Hub,Signup,65
+CMS Hub,Trial,132
+CMS Hub,Visitor,55
+Marketing Hub,Paid,144
+Marketing Hub,Signup,81
+Marketing Hub,Trial,122
+Marketing Hub,Visitor,54
+Ops Hub,Paid,167
+Ops Hub,Signup,77
+Ops Hub,Trial,133
+Ops Hub,Visitor,38
+Sales Hub,Paid,155
+Sales Hub,Signup,79
+Sales Hub,Trial,101
+Sales Hub,Visitor,33
+Service Hub,Paid,156
+Service Hub,Signup,70
+Service Hub,Trial,135
+Service Hub,Visitor,40
