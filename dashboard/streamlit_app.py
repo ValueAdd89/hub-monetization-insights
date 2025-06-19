@@ -86,8 +86,6 @@ with tabs[2]:
 # ------------------------------
 # Tab 4: Geo View
 # ------------------------------
-: Geo View (U.S. State-Level) ---
-: Geo View (Toggle: Global or US) ---
 with tabs[3]:
     st.subheader("🌍 Geographic Customer Distribution")
 
@@ -119,16 +117,10 @@ with tabs[3]:
         )
         fig4.update_layout(geo=dict(bgcolor='rgba(0,0,0,0)'))
         st.plotly_chart(fig4, use_container_width=True)
+
 # ------------------------------
 # Tab 5: Funnel Analysis
 # ------------------------------
-with tabs[4]:
-    st.subheader("📉 Conversion Funnel by Hub")
-    funnel_filtered = df_funnel[df_funnel["hub"] == selected_hub]
-    fig5 = px.funnel(funnel_filtered, x="count", y="stage", title="Customer Funnel")
-    st.plotly_chart(fig5, use_container_width=True)
-
-: Funnel Analysis ---
 with tabs[4]:
     st.subheader("📉 Conversion Funnel by Hub")
     funnel_order = ["Visitor", "Signup", "Trial", "Paid"]
@@ -138,6 +130,13 @@ with tabs[4]:
     fig5 = px.funnel(funnel_sorted, x="count", y="stage", title="Customer Funnel")
     fig5.update_layout(yaxis_title="Funnel Stage", xaxis_title="User Count")
     st.plotly_chart(fig5, use_container_width=True)
+
+# ------------------------------
+# Tab 6: Competitor Pricing
+# ------------------------------
+with tabs[5]:
+    st.subheader("🏁 Competitive Price Benchmark")
+    df_comp = df_competition[
         (df_competition["product_hub"] == selected_hub) & (df_competition["tier"] == selected_tier)
     ]
     fig6 = px.bar(df_comp, x="vendor", y="price_usd", color="vendor", title="Vendor Pricing")
