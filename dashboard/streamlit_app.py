@@ -84,7 +84,10 @@ with tabs[3]:
         st.plotly_chart(fig4, use_container_width=True)
 
     else:
-        geo_data = df_usage.groupby("state").agg(customers=("customer_id", "count")).reset_index()
+geo_data = df_usage[df_usage["state"].notna()]
+        geo_data = geo_data.groupby("state").agg(customers=("customer_id", "count")).reset_index()
+        geo_data = geo_data[geo_data["state"].str.len() == 2]  # ensure two-letter codes
+
         fig4 = go.Figure(data=go.Scattergeo(
             locations=geo_data['state'],
             locationmode="USA-states",
