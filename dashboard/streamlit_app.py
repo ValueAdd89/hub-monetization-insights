@@ -73,7 +73,7 @@ with tabs[3]:
             locationmode="country names",
             text=geo_data['customers'],
             marker=dict(
-                size=geo_data['customers'] / 10,
+                size=geo_data['customers'] / 10 + 5,  # Add minimum size for small counts
                 color='rgba(44, 102, 180, 0.6)',
                 line=dict(color='black', width=0.5)
             )
@@ -83,26 +83,64 @@ with tabs[3]:
         ))
         st.plotly_chart(fig4, use_container_width=True)
 
-    else: # This 'else' statement and its content were previously misaligned
-        geo_data = df_usage[df_usage["state"].notna()]
-        geo_data = geo_data.groupby("state").agg(customers=("customer_id", "count")).reset_index()
-        geo_data = geo_data[geo_data["state"].str.len() == 2]  # ensure two-letter codes
+    else:  # USA States mode
+        # CRITICAL FIX: Only use records where country is "United States"
+        # The data might have US state codes for all countries, which is incorrect for US map.
+        us_only_data = df_usage[df_usage["country"] == "United States"]
 
-        fig4 = go.Figure(data=go.Scattergeo(
-            locations=geo_data['state'],
-            locationmode="USA-states",
-            scope="usa",
-            text=geo_data['customers'],
-            marker=dict(
-                size=geo_data['customers'] / 10,
-                color='rgba(44, 102, 180, 0.6)',
-                line=dict(color='black', width=0.5)
-            )
-        ))
-        fig4.update_layout(title_text="Customer Distribution by U.S. State", geo=dict(
-            showland=True, landcolor='lightgray', showlakes=True, lakecolor='white'
-        ))
-        st.plotly_chart(fig4, use_container_width=True)
+        if not us_only_data.empty:
+            # Ensure 'state' column exists and clean it
+            if "state" in us_only_data.columns:
+                us_only_data["state"] = us_only_data["state"].astype(str).str.strip().str.upper()
+
+            geo_data = us_only_data[us_only_data["state"].notna()]
+            geo_data = geo_data.groupby("state").agg(customers=("customer_id", "count")).reset_index()
+
+            # Valid US state abbreviations that Plotly recognizes (including DC)
+            valid_states = {
+                'AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA',
+                'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD',
+                'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ',
+                'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC',
+                'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY', 'DC'
+            }
+
+            # Filter for valid 2-letter state codes only that are in the valid_states set
+            geo_data = geo_data[
+                (geo_data["state"].str.len() == 2) &
+                (geo_data["state"].isin(valid_states))
+            ]
+
+            if not geo_data.empty:
+                # Ensure state codes are uppercase (though already done, good for double check)
+                geo_data["state"] = geo_data["state"].str.upper()
+
+                fig4 = go.Figure(data=go.Scattergeo(
+                    locations=geo_data['state'],
+                    locationmode="USA-states",
+                    text=geo_data['customers'],
+                    marker=dict(
+                        size=geo_data['customers'] / 2 + 8,  # Adjust size for better visibility on US map
+                        color='rgba(44, 102, 180, 0.6)',
+                        line=dict(color='black', width=0.5)
+                    )
+                ))
+                fig4.update_layout(
+                    title_text="Customer Distribution by U.S. State",
+                    geo=dict(
+                        scope="usa", # Important: Sets the map to display only the USA
+                        showland=True,
+                        landcolor='lightgray',
+                        showlakes=True,
+                        lakecolor='white'
+                    )
+                )
+                st.plotly_chart(fig4, use_container_width=True)
+            else:
+                st.warning("No valid U.S. state data available for visualization after filtering.")
+        else:
+            st.warning("No customer data for 'United States' available for state-level visualization.")
+
 
 with tabs[4]:
     st.subheader("📉 Conversion Funnel by Hub")
