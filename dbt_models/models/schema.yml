@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: stg_usage
+    description: "Staging model for customer usage and churn data"
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+          - unique
+
+  - name: fact_customer_ltv
+    description: "Fact table for LTV and churn metrics"

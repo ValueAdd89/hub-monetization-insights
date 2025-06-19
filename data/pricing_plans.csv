@@ -1,0 +1,16 @@
+hub,tier,price_usd,seats_included
+Marketing Hub,Starter,78,1
+Marketing Hub,Professional,441,5
+Marketing Hub,Enterprise,1218,20
+Sales Hub,Starter,54,1
+Sales Hub,Professional,432,5
+Sales Hub,Enterprise,1197,20
+Service Hub,Starter,60,1
+Service Hub,Professional,428,5
+Service Hub,Enterprise,1247,20
+CMS Hub,Starter,58,1
+CMS Hub,Professional,412,5
+CMS Hub,Enterprise,1200,20
+Ops Hub,Starter,50,1
+Ops Hub,Professional,413,5
+Ops Hub,Enterprise,1242,20

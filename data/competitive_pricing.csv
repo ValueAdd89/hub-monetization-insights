@@ -1,0 +1,61 @@
+product_hub,tier,vendor,price_usd
+Marketing Hub,Starter,Competitor A,83.44
+Marketing Hub,Starter,Competitor B,62.36
+Marketing Hub,Starter,Competitor C,71.39
+Marketing Hub,Starter,HubSpot,78.0
+Marketing Hub,Professional,Competitor A,463.56
+Marketing Hub,Professional,Competitor B,426.26
+Marketing Hub,Professional,Competitor C,467.67
+Marketing Hub,Professional,HubSpot,441.0
+Marketing Hub,Enterprise,Competitor A,1275.26
+Marketing Hub,Enterprise,Competitor B,1245.04
+Marketing Hub,Enterprise,Competitor C,1240.41
+Marketing Hub,Enterprise,HubSpot,1218.0
+Sales Hub,Starter,Competitor A,64.43
+Sales Hub,Starter,Competitor B,30.69
+Sales Hub,Starter,Competitor C,27.97
+Sales Hub,Starter,HubSpot,54.0
+Sales Hub,Professional,Competitor A,405.67
+Sales Hub,Professional,Competitor B,448.64
+Sales Hub,Professional,Competitor C,420.32
+Sales Hub,Professional,HubSpot,432.0
+Sales Hub,Enterprise,Competitor A,1196.13
+Sales Hub,Enterprise,Competitor B,1209.56
+Sales Hub,Enterprise,Competitor C,1171.79
+Sales Hub,Enterprise,HubSpot,1197.0
+Service Hub,Starter,Competitor A,44.94
+Service Hub,Starter,Competitor B,69.69
+Service Hub,Starter,Competitor C,51.27
+Service Hub,Starter,HubSpot,60.0
+Service Hub,Professional,Competitor A,422.08
+Service Hub,Professional,Competitor B,397.02
+Service Hub,Professional,Competitor C,422.48
+Service Hub,Professional,HubSpot,428.0
+Service Hub,Enterprise,Competitor A,1296.57
+Service Hub,Enterprise,Competitor B,1233.61
+Service Hub,Enterprise,Competitor C,1212.59
+Service Hub,Enterprise,HubSpot,1247.0
+CMS Hub,Starter,Competitor A,86.74
+CMS Hub,Starter,Competitor B,73.7
+CMS Hub,Starter,Competitor C,64.38
+CMS Hub,Starter,HubSpot,58.0
+CMS Hub,Professional,Competitor A,372.44
+CMS Hub,Professional,Competitor B,376.7
+CMS Hub,Professional,Competitor C,365.88
+CMS Hub,Professional,HubSpot,412.0
+CMS Hub,Enterprise,Competitor A,1212.95
+CMS Hub,Enterprise,Competitor B,1230.6
+CMS Hub,Enterprise,Competitor C,1213.96
+CMS Hub,Enterprise,HubSpot,1200.0
+Ops Hub,Starter,Competitor A,108.5
+Ops Hub,Starter,Competitor B,36.74
+Ops Hub,Starter,Competitor C,40.29
+Ops Hub,Starter,HubSpot,50.0
+Ops Hub,Professional,Competitor A,416.2
+Ops Hub,Professional,Competitor B,406.12
+Ops Hub,Professional,Competitor C,427.96
+Ops Hub,Professional,HubSpot,413.0
+Ops Hub,Enterprise,Competitor A,1222.81
+Ops Hub,Enterprise,Competitor B,1200.16
+Ops Hub,Enterprise,Competitor C,1188.32
+Ops Hub,Enterprise,HubSpot,1242.0
