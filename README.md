@@ -93,3 +93,38 @@ Feel free to fork, customize, and share feedback or enhancements!
 
 ---
 
+
+---
+
+## 🗺️ Geographic Map Interaction
+
+Inside the **"Geo View" tab** of the dashboard:
+
+- Use the **Map Mode toggle** to switch between:
+  - 🌍 Global map (by country)
+  - 🗺️ USA state-level map
+- Hover over regions to see customer counts
+- The map updates dynamically based on selected mode
+
+---
+
+## 🚀 Deploying to Streamlit Cloud
+
+To deploy this app to [Streamlit Cloud](https://streamlit.io/cloud):
+
+1. **Push this project to GitHub** (already done)
+2. Go to [https://streamlit.io/cloud](https://streamlit.io/cloud)
+3. Click **"New app"** and connect your GitHub repository
+4. Set the file path to:
+   ```bash
+   dashboard/streamlit_app.py
+   ```
+5. Click **Deploy**
+
+✅ Your app will be live at:
+`https://your-username.streamlit.app/hub-monetization-insights`
+
+Optional: Add environment variables or secrets using the **Secrets Manager** in Streamlit Cloud if needed (not required for this project).
+
+---
+
