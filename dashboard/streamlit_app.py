@@ -91,31 +91,59 @@ with tabs[3]:
 
     geo_mode = st.radio("Map Mode", ["Global", "USA States"], horizontal=True)
 
-    if geo_mode == "Global":
+if geo_mode == "Global":
         geo_data_global = df_usage.groupby("country").agg(customers=("customer_id", "count")).reset_index()
-        fig4 = px.choropleth(
-            geo_data_global,
-            locations="country",
-            locationmode="country names",
-            color="customers",
-            color_continuous_scale="Blues",
-            title="Customer Count by Country"
+        fig4 = go.Figure(data=go.Scattergeo(
+            locationmode='country names',
+            locations=geo_data_global['country'],
+            text=geo_data_global['customers'],
+            marker=dict(
+                size=geo_data_global['customers'] / 2,
+                color='rgba(44, 102, 180, 0.6)',
+                line_color='black',
+                line_width=0.5,
+                sizemode='area'
+            )
+        ))
+        fig4.update_layout(
+            title_text='Customer Distribution by Country',
+            geo=dict(
+                showland=True,
+                landcolor='lightgray',
+                lakecolor='white',
+                showlakes=True,
+                bgcolor='rgba(0,0,0,0)'
+            ),
+            margin=dict(l=0, r=0, t=30, b=0)
         )
-        fig4.update_layout(geo=dict(bgcolor='rgba(0,0,0,0)'))
         st.plotly_chart(fig4, use_container_width=True)
 
-    elif geo_mode == "USA States":
+elif geo_mode == "USA States":
         geo_data_us = df_usage.groupby("state").agg(customers=("customer_id", "count")).reset_index()
-        fig4 = px.choropleth(
-            geo_data_us,
-            locations="state",
-            locationmode="USA-states",
-            scope="usa",
-            color="customers",
-            color_continuous_scale="Blues",
-            title="Customer Count by U.S. State"
+        fig4 = go.Figure(data=go.Scattergeo(
+            locationmode='USA-states',
+            locations=geo_data_us['state'],
+            text=geo_data_us['customers'],
+            marker=dict(
+                size=geo_data_us['customers'] / 2,
+                color='rgba(44, 102, 180, 0.6)',
+                line_color='black',
+                line_width=0.5,
+                sizemode='area'
+            )
+        ))
+        fig4.update_layout(
+            title_text='Customer Distribution by U.S. State',
+            geo=dict(
+                scope='usa',
+                showland=True,
+                landcolor='lightgray',
+                lakecolor='white',
+                showlakes=True,
+                bgcolor='rgba(0,0,0,0)'
+            ),
+            margin=dict(l=0, r=0, t=30, b=0)
         )
-        fig4.update_layout(geo=dict(bgcolor='rgba(0,0,0,0)'))
         st.plotly_chart(fig4, use_container_width=True)
 
 # ------------------------------
