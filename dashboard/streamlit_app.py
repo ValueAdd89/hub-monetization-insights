@@ -42,9 +42,10 @@ st.sidebar.title("Hub Filters")
 selected_hub = None
 selected_tier = None
 selected_country = "All Countries" # Default value
+selected_vendor = "All Vendors" # Default value for new single-select vendor filter
 min_mrr, max_mrr = None, None
 min_months, max_months = None, None
-selected_vendors = [] # Default empty list
+
 
 # Hub selection
 if not df_usage.empty and "hub" in df_usage.columns:
@@ -60,15 +61,25 @@ if not df_usage.empty and "tier" in df_usage.columns:
 else:
     st.sidebar.warning("No 'tier' data found in usage data.")
 
-# New: Country Filter (Global)
+# Country Filter (Global)
 if not df_usage.empty and "country" in df_usage.columns:
     unique_countries = sorted(df_usage["country"].unique())
     selected_country = st.sidebar.selectbox(
         "Choose a Country",
-        ["All Countries"] + unique_countries # Add "All Countries" option
+        ["All Countries"] + unique_countries
     )
 else:
     st.sidebar.info("Country data not available for filtering.")
+
+# New: Vendor Filter (for Competitive Pricing) - Moved above sliders
+if not df_competition.empty and "vendor" in df_competition.columns:
+    unique_vendors = sorted(df_competition["vendor"].unique())
+    selected_vendor = st.sidebar.selectbox(
+        "Select Vendor (Competitive Pricing)",
+        ["All Vendors"] + unique_vendors
+    )
+else:
+    st.sidebar.info("Vendor data not available for filtering.")
 
 
 # Monthly Recurring Revenue (MRR) Filter
@@ -112,16 +123,6 @@ if not df_usage.empty and "months_active" in df_usage.columns:
 else:
     st.sidebar.info("Months Active data not available for filtering.")
 
-# New: Vendor Filter (for Competitive Pricing)
-if not df_competition.empty and "vendor" in df_competition.columns:
-    unique_vendors = sorted(df_competition["vendor"].unique())
-    selected_vendors = st.sidebar.multiselect(
-        "Select Vendors (Competitive Pricing)",
-        unique_vendors,
-        default=unique_vendors # Default to all selected
-    )
-else:
-    st.sidebar.info("Vendor data not available for filtering.")
 
 # --- 4. Main Dashboard Title ---
 st.title("💸 Hub Monetization Insights Dashboard")
@@ -140,7 +141,6 @@ def apply_global_filters(dataframe):
         filtered_df = filtered_df[filtered_df["hub"] == selected_hub]
     if selected_tier and "tier" in filtered_df.columns:
         filtered_df = filtered_df[filtered_df["tier"] == selected_tier]
-    # Apply new Country filter
     if selected_country != "All Countries" and "country" in filtered_df.columns:
         filtered_df = filtered_df[filtered_df["country"] == selected_country]
     if min_mrr is not None and max_mrr is not None and "monthly_recurring_revenue" in filtered_df.columns:
@@ -310,11 +310,11 @@ with tabs[4]:
 
     compare_by = st.radio("Compare Funnel By:", ["Hub", "Tier", "Country"], horizontal=True)
 
-    stage_order = ["Visitor", "Signup", "Trial", "Paid"]
+    stage_order = ["Visitor", "Signup", "Trial", "Paid"] # Define once for all branches in this tab
 
     if compare_by == "Hub":
         if not df_funnel.empty and "hub" in df_funnel.columns:
-            selected_hub_funnel = st.selectbox("Select Hub to Analyze", sorted(df_funnel["hub"].unique()), key="funnel_hub_select")
+            selected_hub_funnel = st.selectbox("Select Hub to Analyze", sorted(df_funnel["hub"].unique()), key="funnel_hub_select_new")
             funnel_filtered = df_funnel[df_funnel["hub"] == selected_hub_funnel].copy()
 
             funnel_filtered.loc[:, "stage"] = pd.Categorical(funnel_filtered["stage"], categories=stage_order, ordered=True)
@@ -342,7 +342,7 @@ with tabs[4]:
 
                 fig5 = px.funnel(funnel_sorted, x="count", y="stage",
                                  title=f"Customer Acquisition Funnel – {selected_hub_funnel}",
-                                 text="count") # Use 'count' column for text labels
+                                 text="count") # Explicitly set text labels
                 fig5.update_layout(
                     yaxis_title="Funnel Stage",
                     xaxis_title="Customer Count",
@@ -359,87 +359,107 @@ with tabs[4]:
             st.info("Funnel data by Hub is not available (funnel_data.csv might be empty or missing 'hub' column).")
 
     elif compare_by == "Tier":
-        filtered_funnel_usage = apply_global_filters(df_usage)
+        # Analyze funnel by tier using usage_data with CORRECTED LOGIC
+        filtered_funnel_usage = apply_global_filters(df_usage) # Apply global filters here
         if not filtered_funnel_usage.empty and "tier" in filtered_funnel_usage.columns and "stage" in filtered_funnel_usage.columns:
             available_tiers = sorted(filtered_funnel_usage["tier"].unique())
-            selected_tier_funnel = st.selectbox("Select Tier to Analyze", available_tiers, key="funnel_tier_select")
+            selected_tier_funnel = st.selectbox("Select Tier to Analyze", available_tiers, key="funnel_tier_select_new")
 
             tier_data = filtered_funnel_usage[filtered_funnel_usage["tier"] == selected_tier_funnel].copy()
-            tier_funnel = tier_data.groupby("stage").size().reset_index(name="count")
-            tier_funnel.loc[:, "stage"] = pd.Categorical(tier_funnel["stage"], categories=stage_order, ordered=True)
-            tier_funnel = tier_funnel.sort_values("stage")
 
-            if not tier_funnel.empty:
-                stage_counts = tier_funnel.set_index("stage")["count"]
+            # CRITICAL FIX: Calculate proper funnel metrics (counts for each stage)
+            visitor_count = len(tier_data[tier_data["stage"] == "Visitor"])
+            signup_count = len(tier_data[tier_data["stage"] == "Signup"])
+            trial_count = len(tier_data[tier_data["stage"] == "Trial"])
+            paid_count = len(tier_data[tier_data["stage"] == "Paid"])
 
-                visitor_count = stage_counts.get("Visitor", 0)
-                signup_count = stage_counts.get("Signup", 0)
-                trial_count = stage_counts.get("Trial", 0)
-                paid_count = stage_counts.get("Paid", 0)
+            # Create proper funnel data that maintains decreasing order
+            tier_funnel_data = [
+                {"stage": "Visitor", "count": visitor_count},
+                {"stage": "Signup", "count": signup_count},
+                {"stage": "Trial", "count": trial_count},
+                {"stage": "Paid", "count": paid_count}
+            ]
+            tier_funnel = pd.DataFrame(tier_funnel_data)
 
-                signup_rate = (signup_count / visitor_count * 100) if visitor_count > 0 else 0
-                trial_rate = (trial_count / signup_count * 100) if signup_count > 0 else 0
-                paid_rate = (paid_count / trial_count * 100) if trial_count > 0 else 0
+            # Calculate conversion rates
+            signup_rate = (signup_count / visitor_count * 100) if visitor_count > 0 else 0
+            trial_rate = (trial_count / signup_count * 100) if signup_count > 0 else 0
+            paid_rate = (paid_count / trial_count * 100) if trial_count > 0 else 0
 
-                col1, col2, col3 = st.columns(3)
-                col1.metric("Visitor → Signup", f"{signup_rate:.1f}%")
-                col2.metric("Signup → Trial", f"{trial_rate:.1f}%")
-                col3.metric("Trial → Paid", f"{paid_rate:.1f}%")
+            col1, col2, col3 = st.columns(3)
+            col1.metric("Visitor → Signup", f"{signup_rate:.1f}%")
+            col2.metric("Signup → Trial", f"{trial_rate:.1f}%")
+            col3.metric("Trial → Paid", f"{paid_rate:.1f}%")
 
-                fig5 = px.funnel(tier_funnel, x="count", y="stage",
-                                 title=f"Conversion Funnel – {selected_tier_funnel} Tier",
-                                 text="count") # Use 'count' column for text labels
-                fig5.update_layout(yaxis={'categoryorder': 'array', 'categoryarray': stage_order})
-                fig5.update_traces(textposition='inside') # Position text inside bars
-                st.plotly_chart(fig5, use_container_width=True)
-            else:
-                st.info(f"No usage data available for '{selected_tier_funnel}' tier with the selected filters to build a funnel.")
+            fig5 = px.funnel(tier_funnel, x="count", y="stage",
+                             title=f"Conversion Funnel – {selected_tier_funnel} Tier",
+                             text="count") # Explicitly set text labels
+            fig5.update_layout(yaxis={'categoryorder': 'array', 'categoryarray': stage_order})
+            fig5.update_traces(textposition='inside') # Position text inside bars
+            st.plotly_chart(fig5, use_container_width=True)
+
+            # Tier-specific insights
+            total_customers = len(tier_data)
+            avg_mrr_paid_tier = tier_data[tier_data["stage"] == "Paid"]["monthly_recurring_revenue"].mean()
+            st.info(f"📊 **{selected_tier_funnel} Tier**: {total_customers} total customers in filter, ${avg_mrr_paid_tier:.2f} average MRR for paid customers in this tier.")
+
         else:
             st.info("Usage data is required for Tier funnel analysis and is either empty or missing 'tier'/'stage' columns, or no data after filters.")
 
     else:  # Country analysis
-        filtered_funnel_usage = apply_global_filters(df_usage)
+        # Analyze funnel by country using usage_data with CORRECTED LOGIC
+        filtered_funnel_usage = apply_global_filters(df_usage) # Apply global filters here
         if not filtered_funnel_usage.empty and "country" in filtered_funnel_usage.columns and "stage" in filtered_funnel_usage.columns:
             available_countries = sorted(filtered_funnel_usage["country"].unique())
-            selected_country_funnel = st.selectbox("Select Country to Analyze", available_countries, key="funnel_country_select")
+            selected_country_funnel = st.selectbox("Select Country to Analyze", available_countries, key="funnel_country_select_new")
 
             country_data = filtered_funnel_usage[filtered_funnel_usage["country"] == selected_country_funnel].copy()
-            country_funnel = country_data.groupby("stage").size().reset_index(name="count")
-            country_funnel.loc[:, "stage"] = pd.Categorical(country_funnel["stage"], categories=stage_order, ordered=True)
-            country_funnel = country_funnel.sort_values("stage")
 
-            if not country_funnel.empty:
-                stage_counts = country_funnel.set_index("stage")["count"]
+            # CRITICAL FIX: Calculate proper funnel metrics (counts for each stage)
+            visitor_count = len(country_data[country_data["stage"] == "Visitor"])
+            signup_count = len(country_data[country_data["stage"] == "Signup"])
+            trial_count = len(country_data[country_data["stage"] == "Trial"])
+            paid_count = len(country_data[country_data["stage"] == "Paid"])
 
-                visitor_count = stage_counts.get("Visitor", 0)
-                signup_count = stage_counts.get("Signup", 0)
-                trial_count = stage_counts.get("Trial", 0)
-                paid_count = stage_counts.get("Paid", 0)
+            # Create proper funnel data
+            country_funnel_data = [
+                {"stage": "Visitor", "count": visitor_count},
+                {"stage": "Signup", "count": signup_count},
+                {"stage": "Trial", "count": trial_count},
+                {"stage": "Paid", "count": paid_count}
+            ]
+            country_funnel = pd.DataFrame(country_funnel_data)
 
-                signup_rate = (signup_count / visitor_count * 100) if visitor_count > 0 else 0
-                trial_rate = (trial_count / signup_count * 100) if signup_count > 0 else 0
-                paid_rate = (paid_count / trial_count * 100) if trial_count > 0 else 0
+            # Calculate conversion rates
+            signup_rate = (signup_count / visitor_count * 100) if visitor_count > 0 else 0
+            trial_rate = (trial_count / signup_count * 100) if signup_count > 0 else 0
+            paid_rate = (paid_count / trial_count * 100) if trial_count > 0 else 0
 
-                col1, col2, col3 = st.columns(3)
-                col1.metric("Visitor → Signup", f"{signup_rate:.1f}%")
-                col2.metric("Signup → Trial", f"{trial_rate:.1f}%")
-                col3.metric("Trial → Paid", f"{paid_rate:.1f}%")
+            col1, col2, col3 = st.columns(3)
+            col1.metric("Visitor → Signup", f"{signup_rate:.1f}%")
+            col2.metric("Signup → Trial", f"{trial_rate:.1f}%")
+            col3.metric("Trial → Paid", f"{paid_rate:.1f}%")
 
-                fig5 = px.funnel(country_funnel, x="count", y="stage",
-                                 title=f"Conversion Funnel – {selected_country_funnel}",
-                                 text="count") # Use 'count' column for text labels
-                fig5.update_layout(yaxis={'categoryorder': 'array', 'categoryarray': stage_order})
-                fig5.update_traces(textposition='inside') # Position text inside bars
-                st.plotly_chart(fig5, use_container_width=True)
+            fig5 = px.funnel(country_funnel, x="count", y="stage",
+                             title=f"Conversion Funnel – {selected_country_funnel}",
+                             text="count") # Explicitly set text labels
+            fig5.update_layout(yaxis={'categoryorder': 'array', 'categoryarray': stage_order})
+            fig5.update_traces(textposition='inside') # Position text inside bars
+            st.plotly_chart(fig5, use_container_width=True)
 
-                if selected_country_funnel == "United States":
-                    st.info("🇺🇸 US market shows strong trial adoption - consider premium tier promotions.")
-                elif selected_country_funnel in ["United Kingdom", "Germany"]:
-                    st.info("🇪🇺 European markets - consider GDPR-compliant onboarding optimizations.")
-                elif selected_country_funnel in ["India", "Australia"]:
-                    st.info("🌏 Asia-Pacific regions - evaluate pricing sensitivity and local payment methods.")
+            # Show geographic insights
+            total_customers = len(country_data)
+            paid_customers = len(country_data[country_data["stage"] == "Paid"])
+
+            if selected_country_funnel == "United States":
+                st.info(f"🇺🇸 **US Market**: {total_customers} total customers, {paid_customers} paying customers. Strong trial adoption - consider premium tier promotions")
+            elif selected_country_funnel in ["United Kingdom", "Germany"]:
+                st.info(f"🇪🇺 **{selected_country_funnel}**: {total_customers} total customers, {paid_customers} paying customers. European market - consider GDPR-compliant onboarding optimizations")
+            elif selected_country_funnel in ["India", "Australia", "Canada"]:
+                st.info(f"🌏 **{selected_country_funnel}**: {total_customers} total customers, {paid_customers} paying customers. International market - evaluate pricing sensitivity and local payment methods")
             else:
-                st.info(f"No usage data available for '{selected_country_funnel}' with the selected filters to build a funnel.")
+                st.info(f"📊 **{selected_country_funnel}**: {total_customers} total customers, {paid_customers} paying customers")
         else:
             st.info("Usage data is required for Country funnel analysis and is either empty or missing 'country'/'stage' columns, or no data after filters.")
 
@@ -453,11 +473,10 @@ with tabs[5]:
         ].copy()
 
         # Apply Vendor filter (from sidebar)
-        if selected_vendors and "vendor" in df_comp.columns:
-            df_comp = df_comp[df_comp["vendor"].isin(selected_vendors)]
-        elif not selected_vendors and not df_competition.empty and "vendor" in df_competition.columns:
-             # If no vendors are selected in multiselect, show no data
-             df_comp = pd.DataFrame()
+        if selected_vendor != "All Vendors" and "vendor" in df_comp.columns:
+            df_comp = df_comp[df_comp["vendor"] == selected_vendor] # Filter for single selected vendor
+        # If 'All Vendors' is selected or no vendor filter is applied, df_comp remains as is from hub/tier filtering.
+        # If a specific vendor is chosen but not found, df_comp will become empty, which is handled below.
 
         if not df_comp.empty:
             df_comp['price_usd'] = pd.to_numeric(df_comp['price_usd'], errors='coerce')
@@ -465,7 +484,7 @@ with tabs[5]:
 
             if not df_comp.empty:
                 fig6 = px.bar(df_comp, x="vendor", y="price_usd", color="vendor",
-                              title=f"Vendor Pricing for {selected_hub} - {selected_tier}",
+                              title=f"Vendor Pricing for {selected_hub} - {selected_tier} ({selected_vendor} Only)" if selected_vendor != "All Vendors" else f"Vendor Pricing for {selected_hub} - {selected_tier}",
                               text_auto=True)
                 fig6.update_layout(xaxis_title="Vendor", yaxis_title="Price (USD)")
                 st.plotly_chart(fig6, use_container_width=True)
@@ -476,9 +495,9 @@ with tabs[5]:
                 - Are you priced competitively? Higher pricing might require strong value proposition.
                 """)
             else:
-                st.info(f"No valid competitive pricing data for {selected_hub} / {selected_tier} with selected vendors after cleaning.")
+                st.info(f"No valid competitive pricing data for {selected_hub} / {selected_tier} with selected vendor after cleaning.")
         else:
-            st.info(f"No competitive pricing data available for {selected_hub} / {selected_tier} with selected vendors.")
+            st.info(f"No competitive pricing data available for {selected_hub} / {selected_tier} with selected vendor.")
     else:
         st.info("Competitive pricing data not available or Hub/Tier not selected.")
 
