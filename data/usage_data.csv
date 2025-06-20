@@ -1,3 +1,4 @@
+customer_id,signup_date,hub,tier,monthly_recurring_revenue,months_active,churned,ltv,country,state,stage
 499,2023-10-01,Marketing Hub,Professional,0,0,false,0,Australia,,Signup
 500,2023-02-10,Ops Hub,Professional,0,0,false,0,Canada,,Signup
 501,2024-03-22,CMS Hub,Starter,0,0,false,0,Germany,,Signup
@@ -499,7 +500,7 @@
 997,2024-09-24,Ops Hub,Professional,110.63,22,true,2433.92,India,,Paid
 998,2024-12-06,Marketing Hub,Starter,37.93,4,true,151.72,Germany,,Paid
 999,2024-05-14,Marketing Hub,Professional,139.22,5,false,696.12,United States,FL,Paid
-1000,2024-01-29,CMS Hub,Enterprise,365.42,10,false,3654.23,India,,Paidcustomer_id,signup_date,hub,tier,monthly_recurring_revenue,months_active,churned,ltv,country,state,stage
+1000,2024-01-29,CMS Hub,Enterprise,365.42,10,false,3654.23,India,,Paid
 1,2023-11-07,Marketing Hub,Enterprise,0,0,false,0,Germany,,Visitor
 2,2024-01-31,CMS Hub,Enterprise,0,0,false,0,India,,Visitor
 3,2023-07-27,Marketing Hub,Professional,0,0,false,0,United States,MA,Visitor
