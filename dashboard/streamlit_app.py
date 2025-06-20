@@ -181,8 +181,6 @@ with tabs[0]:
 with tabs[1]:
     st.subheader("💵 Price Elasticity Curve")
     if not df_elasticity.empty and selected_hub and selected_tier:
-        # Elasticity data is often pre-calculated or not directly tied to individual customer MRR/months_active/country.
-        # We apply hub/tier filter but not MRR/Months Active or Country to this specific data.
         elastic_filtered = df_elasticity[
             (df_elasticity["hub"] == selected_hub) & (df_elasticity["tier"] == selected_tier)
         ]
@@ -206,7 +204,6 @@ with tabs[1]:
 with tabs[2]:
     st.subheader("📈 Lifetime Value Treemap")
     if not df_treemap.empty:
-        # LTV treemap is typically for overall product lines, not filtered by customer-level MRR/Months Active/Country
         fig3 = px.treemap(df_treemap, path=["hub", "tier"], values="avg_ltv",
                           title="Average LTV Contribution by Product Line")
         fig3.update_traces(textinfo="label+value", texttemplate="%{label}<br>$%{value:.2s}")
@@ -225,7 +222,6 @@ with tabs[3]:
     st.subheader("🌍 Geographic Customer Distribution")
     geo_mode = st.radio("Map Mode", ["Global", "USA States"], horizontal=True)
 
-    # Apply global filters to df_usage before processing for geo data
     filtered_geo_usage = apply_global_filters(df_usage)
 
     if geo_mode == "Global":
@@ -317,7 +313,6 @@ with tabs[4]:
     stage_order = ["Visitor", "Signup", "Trial", "Paid"]
 
     if compare_by == "Hub":
-        # Funnel data by Hub uses df_funnel directly, which is assumed to be pre-aggregated
         if not df_funnel.empty and "hub" in df_funnel.columns:
             selected_hub_funnel = st.selectbox("Select Hub to Analyze", sorted(df_funnel["hub"].unique()), key="funnel_hub_select")
             funnel_filtered = df_funnel[df_funnel["hub"] == selected_hub_funnel].copy()
@@ -347,12 +342,13 @@ with tabs[4]:
 
                 fig5 = px.funnel(funnel_sorted, x="count", y="stage",
                                  title=f"Customer Acquisition Funnel – {selected_hub_funnel}",
-                                 text_auto=True)
+                                 text="count") # Use 'count' column for text labels
                 fig5.update_layout(
                     yaxis_title="Funnel Stage",
                     xaxis_title="Customer Count",
                     yaxis={'categoryorder': 'array', 'categoryarray': stage_order}
                 )
+                fig5.update_traces(textposition='inside') # Position text inside bars
                 st.plotly_chart(fig5, use_container_width=True)
 
                 overall_conversion = (paid_count / visitor_count * 100) if visitor_count > 0 else 0
@@ -363,10 +359,10 @@ with tabs[4]:
             st.info("Funnel data by Hub is not available (funnel_data.csv might be empty or missing 'hub' column).")
 
     elif compare_by == "Tier":
-        # Funnel data by Tier uses df_usage, so apply global filters
-        filtered_funnel_usage = apply_global_filters(df_usage) # This now includes the global country filter
+        filtered_funnel_usage = apply_global_filters(df_usage)
         if not filtered_funnel_usage.empty and "tier" in filtered_funnel_usage.columns and "stage" in filtered_funnel_usage.columns:
-            selected_tier_funnel = st.selectbox("Select Tier to Analyze", sorted(filtered_funnel_usage["tier"].unique()), key="funnel_tier_select")
+            available_tiers = sorted(filtered_funnel_usage["tier"].unique())
+            selected_tier_funnel = st.selectbox("Select Tier to Analyze", available_tiers, key="funnel_tier_select")
 
             tier_data = filtered_funnel_usage[filtered_funnel_usage["tier"] == selected_tier_funnel].copy()
             tier_funnel = tier_data.groupby("stage").size().reset_index(name="count")
@@ -392,8 +388,9 @@ with tabs[4]:
 
                 fig5 = px.funnel(tier_funnel, x="count", y="stage",
                                  title=f"Conversion Funnel – {selected_tier_funnel} Tier",
-                                 text_auto=True)
+                                 text="count") # Use 'count' column for text labels
                 fig5.update_layout(yaxis={'categoryorder': 'array', 'categoryarray': stage_order})
+                fig5.update_traces(textposition='inside') # Position text inside bars
                 st.plotly_chart(fig5, use_container_width=True)
             else:
                 st.info(f"No usage data available for '{selected_tier_funnel}' tier with the selected filters to build a funnel.")
@@ -401,10 +398,8 @@ with tabs[4]:
             st.info("Usage data is required for Tier funnel analysis and is either empty or missing 'tier'/'stage' columns, or no data after filters.")
 
     else:  # Country analysis
-        # Funnel data by Country uses df_usage, so apply global filters
-        filtered_funnel_usage = apply_global_filters(df_usage) # This now includes the global country filter
+        filtered_funnel_usage = apply_global_filters(df_usage)
         if not filtered_funnel_usage.empty and "country" in filtered_funnel_usage.columns and "stage" in filtered_funnel_usage.columns:
-            # The local selectbox for country should only show options from the already filtered data
             available_countries = sorted(filtered_funnel_usage["country"].unique())
             selected_country_funnel = st.selectbox("Select Country to Analyze", available_countries, key="funnel_country_select")
 
@@ -432,8 +427,9 @@ with tabs[4]:
 
                 fig5 = px.funnel(country_funnel, x="count", y="stage",
                                  title=f"Conversion Funnel – {selected_country_funnel}",
-                                 text_auto=True)
+                                 text="count") # Use 'count' column for text labels
                 fig5.update_layout(yaxis={'categoryorder': 'array', 'categoryarray': stage_order})
+                fig5.update_traces(textposition='inside') # Position text inside bars
                 st.plotly_chart(fig5, use_container_width=True)
 
                 if selected_country_funnel == "United States":
@@ -456,7 +452,7 @@ with tabs[5]:
             (df_competition["product_hub"] == selected_hub) & (df_competition["tier"] == selected_tier)
         ].copy()
 
-        # Apply Vendor filter
+        # Apply Vendor filter (from sidebar)
         if selected_vendors and "vendor" in df_comp.columns:
             df_comp = df_comp[df_comp["vendor"].isin(selected_vendors)]
         elif not selected_vendors and not df_competition.empty and "vendor" in df_competition.columns:
