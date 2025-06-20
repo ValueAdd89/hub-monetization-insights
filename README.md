@@ -17,7 +17,7 @@
 
 ## 🎯 Project Overview
 
-This project simulates a production-grade monetization analytics stack for a multi-product B2B SaaS company (similar to HubSpot's hub model), featuring synthetic customer data, advanced pricing elasticity models, competitive intelligence, and an executive-facing dashboard with actionable insights.
+This project simulates a production-grade monetization analytics stack for a multi-product B2B SaaS company, featuring synthetic customer data, advanced pricing elasticity models, competitive intelligence, and an executive-facing dashboard with actionable insights.
 
 **Challenge**: B2B SaaS companies struggle with pricing optimization across multiple product lines, lacking integrated analytics to understand customer lifetime value, price elasticity, and competitive positioning.
 
