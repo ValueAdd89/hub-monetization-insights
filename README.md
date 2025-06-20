@@ -267,7 +267,11 @@ jupyter notebook notebooks/
 
 <div align="center">
   
-*(To be added: Include captivating screenshots of your Streamlit dashboard here to visually showcase the analytics and insights.)*
+
+*![image](https://github.com/user-attachments/assets/fcf60fd1-cc96-44f5-9dcf-de0c273ae9b5)*
+*![image](https://github.com/user-attachments/assets/822afbeb-c3b8-4f4f-8661-b95b1eb3bd51)*
+*![image](https://github.com/user-attachments/assets/a64af6c4-ee33-4fa0-910b-f9b70a8fb9a6)*
+
 
 </div>
 
