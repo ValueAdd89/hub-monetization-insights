@@ -1,0 +1,1002 @@
+customer_id,signup_date,hub,tier,monthly_recurring_revenue,months_active,churned,ltv,country,state,stage
+499,2023-10-01,Marketing Hub,Professional,0,0,false,0,Australia,,Signup
+500,2023-02-10,Ops Hub,Professional,0,0,false,0,Canada,,Signup
+501,2024-03-22,CMS Hub,Starter,0,0,false,0,Germany,,Signup
+502,2023-05-12,Sales Hub,Professional,0,0,false,0,Canada,,Signup
+503,2024-11-03,Service Hub,Starter,0,0,false,0,Canada,,Signup
+504,2024-12-19,Sales Hub,Enterprise,0,0,false,0,India,,Signup
+505,2023-02-04,Sales Hub,Starter,0,0,false,0,India,,Signup
+506,2024-12-23,Ops Hub,Professional,0,0,false,0,Australia,,Signup
+507,2024-03-13,CMS Hub,Starter,0,0,false,0,United Kingdom,,Signup
+508,2024-04-09,Sales Hub,Enterprise,0,0,false,0,United States,PA,Signup
+509,2023-01-14,Ops Hub,Professional,0,0,false,0,India,,Signup
+510,2024-10-15,Sales Hub,Professional,0,0,false,0,United States,NY,Signup
+511,2024-05-07,Marketing Hub,Enterprise,0,0,true,0,Canada,,Signup
+512,2024-06-07,CMS Hub,Professional,0,0,false,0,Germany,,Signup
+513,2024-04-22,CMS Hub,Professional,0,0,false,0,Germany,,Signup
+514,2023-04-02,Sales Hub,Starter,0,0,false,0,India,,Signup
+515,2024-05-28,Sales Hub,Enterprise,0,0,false,0,Germany,,Signup
+516,2024-11-05,Ops Hub,Starter,0,0,false,0,United States,MA,Signup
+517,2023-06-12,Marketing Hub,Enterprise,0,0,false,0,Australia,,Signup
+518,2024-02-14,CMS Hub,Enterprise,0,0,false,0,United States,FL,Signup
+519,2024-05-02,Marketing Hub,Enterprise,0,0,false,0,United States,WA,Signup
+520,2023-12-06,Service Hub,Starter,0,0,false,0,United Kingdom,,Signup
+521,2023-03-13,Service Hub,Enterprise,0,0,false,0,Australia,,Signup
+522,2023-03-10,Service Hub,Professional,0,0,false,0,Australia,,Signup
+523,2023-12-01,Sales Hub,Enterprise,0,0,false,0,United States,NC,Signup
+524,2023-09-20,Marketing Hub,Professional,0,0,false,0,India,,Signup
+525,2023-06-08,CMS Hub,Professional,0,0,false,0,India,,Signup
+526,2023-12-03,Sales Hub,Professional,0,0,false,0,India,,Signup
+527,2024-03-16,Marketing Hub,Professional,0,0,false,0,Australia,,Signup
+528,2023-09-18,CMS Hub,Enterprise,0,0,false,0,Canada,,Signup
+529,2024-02-23,Marketing Hub,Starter,0,0,false,0,United Kingdom,,Signup
+530,2024-01-25,Ops Hub,Starter,0,0,false,0,United Kingdom,,Signup
+531,2024-07-20,Sales Hub,Starter,0,0,true,0,United Kingdom,,Signup
+532,2024-04-24,Sales Hub,Starter,0,0,false,0,Canada,,Signup
+533,2023-06-21,Marketing Hub,Professional,0,0,false,0,Canada,,Signup
+534,2023-06-25,CMS Hub,Starter,0,0,false,0,Germany,,Signup
+535,2024-08-31,Service Hub,Professional,0,0,false,0,Germany,,Signup
+536,2023-07-02,Ops Hub,Professional,0,0,false,0,India,,Signup
+537,2023-06-24,CMS Hub,Professional,0,0,true,0,Australia,,Signup
+538,2023-12-29,CMS Hub,Professional,0,0,false,0,Canada,,Signup
+539,2024-10-22,CMS Hub,Starter,0,0,false,0,Germany,,Signup
+540,2024-10-09,CMS Hub,Starter,0,0,false,0,United Kingdom,,Signup
+541,2024-08-11,CMS Hub,Professional,0,0,false,0,Australia,,Signup
+542,2023-03-29,Ops Hub,Starter,0,0,false,0,Australia,,Signup
+543,2023-10-02,Ops Hub,Starter,0,0,false,0,United Kingdom,,Signup
+544,2023-05-12,Ops Hub,Starter,0,0,true,0,India,,Signup
+545,2024-06-27,Service Hub,Starter,0,0,false,0,United Kingdom,,Signup
+546,2024-04-07,Sales Hub,Starter,0,0,false,0,Australia,,Signup
+547,2024-03-02,CMS Hub,Professional,0,0,false,0,United States,MA,Signup
+548,2023-03-20,Sales Hub,Professional,0,0,false,0,Canada,,Signup
+549,2023-06-17,Marketing Hub,Starter,0,0,false,0,India,,Signup
+550,2023-10-06,Ops Hub,Enterprise,0,0,true,0,India,,Signup
+551,2023-02-15,Ops Hub,Professional,0,0,false,0,Australia,,Signup
+552,2024-01-30,Service Hub,Starter,0,0,false,0,Australia,,Signup
+553,2023-07-03,Ops Hub,Enterprise,0,0,false,0,United Kingdom,,Signup
+554,2024-12-22,CMS Hub,Starter,0,0,false,0,Canada,,Signup
+555,2024-02-20,Marketing Hub,Starter,0,0,false,0,United States,CA,Signup
+556,2024-09-14,Ops Hub,Professional,0,0,false,0,Australia,,Signup
+557,2023-03-04,Sales Hub,Professional,0,0,false,0,Germany,,Signup
+558,2023-10-10,Marketing Hub,Starter,0,0,false,0,United Kingdom,,Signup
+559,2023-04-16,Service Hub,Enterprise,0,0,false,0,India,,Signup
+560,2024-11-23,Ops Hub,Starter,0,0,false,0,United States,CA,Signup
+561,2023-06-05,Sales Hub,Enterprise,0,0,true,0,United Kingdom,,Signup
+562,2023-07-31,Sales Hub,Enterprise,0,0,false,0,Australia,,Signup
+563,2023-03-30,Service Hub,Enterprise,0,0,false,0,United States,WA,Signup
+564,2023-07-17,Service Hub,Starter,0,0,false,0,Canada,,Signup
+565,2024-04-13,Sales Hub,Starter,0,0,false,0,Germany,,Signup
+566,2023-03-13,Ops Hub,Enterprise,0,0,true,0,Australia,,Signup
+567,2024-02-01,Marketing Hub,Professional,0,0,false,0,Australia,,Signup
+568,2023-08-15,Marketing Hub,Professional,0,0,false,0,India,,Signup
+569,2023-07-23,CMS Hub,Starter,0,0,true,0,Germany,,Signup
+570,2024-07-24,Sales Hub,Professional,0,0,false,0,United Kingdom,,Signup
+571,2023-09-12,Ops Hub,Professional,0,0,false,0,Germany,,Signup
+572,2024-12-20,CMS Hub,Professional,0,0,true,0,India,,Signup
+573,2024-07-27,Service Hub,Professional,0,0,false,0,India,,Signup
+574,2024-06-20,CMS Hub,Enterprise,0,0,false,0,India,,Signup
+575,2023-03-03,Marketing Hub,Starter,0,0,false,0,Canada,,Signup
+576,2024-04-14,Sales Hub,Starter,0,0,false,0,Canada,,Signup
+577,2024-10-05,Ops Hub,Starter,0,0,false,0,Germany,,Signup
+578,2024-08-05,Service Hub,Enterprise,0,0,true,0,United States,NC,Signup
+579,2023-08-14,Sales Hub,Starter,0,0,false,0,Germany,,Signup
+580,2023-07-08,Marketing Hub,Enterprise,0,0,false,0,United States,NJ,Signup
+581,2024-05-29,Sales Hub,Starter,0,0,false,0,United Kingdom,,Signup
+582,2023-03-31,Marketing Hub,Professional,0,0,false,0,India,,Signup
+583,2024-03-10,Service Hub,Professional,0,0,false,0,Canada,,Signup
+584,2024-05-13,Ops Hub,Starter,0,0,false,0,United States,NY,Signup
+585,2023-11-27,Service Hub,Enterprise,0,0,false,0,United States,PA,Signup
+586,2023-08-10,CMS Hub,Starter,0,0,false,0,Canada,,Signup
+587,2023-03-04,Ops Hub,Professional,0,0,true,0,Germany,,Signup
+588,2023-05-31,Marketing Hub,Starter,0,0,false,0,Canada,,Signup
+589,2023-06-13,Marketing Hub,Enterprise,0,0,false,0,United States,OH,Signup
+590,2024-01-07,Sales Hub,Professional,0,0,false,0,Australia,,Signup
+591,2023-06-12,Marketing Hub,Enterprise,0,0,false,0,Australia,,Signup
+592,2024-11-22,CMS Hub,Starter,0,0,false,0,United Kingdom,,Signup
+593,2024-05-08,Service Hub,Professional,0,0,false,0,India,,Signup
+594,2023-01-20,Ops Hub,Professional,0,0,false,0,United States,IL,Signup
+595,2023-01-06,Ops Hub,Enterprise,0,0,false,0,Australia,,Signup
+596,2024-10-18,Marketing Hub,Professional,0,0,false,0,United States,GA,Signup
+597,2024-03-06,Marketing Hub,Professional,0,0,false,0,Australia,,Signup
+598,2023-08-19,Marketing Hub,Enterprise,0,0,false,0,Australia,,Signup
+599,2023-12-26,Sales Hub,Starter,0,0,false,0,Germany,,Signup
+600,2023-07-20,Ops Hub,Professional,0,0,true,0,United States,WA,Signup
+601,2024-03-18,Ops Hub,Professional,0,0,false,0,United States,WA,Signup
+602,2023-03-30,Service Hub,Professional,0,0,false,0,Australia,,Signup
+603,2024-10-19,Marketing Hub,Enterprise,0,0,false,0,Germany,,Signup
+604,2024-11-18,Ops Hub,Starter,0,0,false,0,Canada,,Signup
+605,2024-09-02,Sales Hub,Enterprise,0,0,false,0,India,,Signup
+606,2024-04-12,Sales Hub,Starter,0,0,false,0,Canada,,Signup
+607,2024-05-01,Ops Hub,Starter,0,0,false,0,Australia,,Signup
+608,2023-08-04,Sales Hub,Professional,0,0,true,0,Canada,,Signup
+609,2023-04-30,Service Hub,Starter,0,0,false,0,United Kingdom,,Signup
+610,2023-08-02,Sales Hub,Starter,0,0,false,0,United States,IL,Signup
+611,2023-12-19,Sales Hub,Starter,0,0,false,0,India,,Signup
+612,2024-12-28,Marketing Hub,Professional,0,0,false,0,Canada,,Signup
+613,2023-01-27,Marketing Hub,Starter,0,0,false,0,Germany,,Signup
+614,2024-06-17,Service Hub,Starter,0,0,false,0,United Kingdom,,Signup
+615,2023-10-24,CMS Hub,Starter,0,0,false,0,Germany,,Signup
+616,2023-11-12,Ops Hub,Starter,0,0,false,0,United States,OH,Signup
+617,2024-09-03,Marketing Hub,Enterprise,0,0,true,0,United Kingdom,,Signup
+618,2024-01-01,Marketing Hub,Professional,0,0,false,0,United Kingdom,,Signup
+619,2023-02-10,Ops Hub,Starter,0,0,false,0,Australia,,Signup
+620,2023-04-14,Sales Hub,Enterprise,0,0,false,0,Germany,,Signup
+621,2024-01-17,Service Hub,Starter,0,0,false,0,United Kingdom,,Signup
+622,2024-07-05,Ops Hub,Enterprise,0,0,false,0,India,,Signup
+623,2023-03-17,Ops Hub,Enterprise,0,0,false,0,India,,Signup
+624,2024-09-20,CMS Hub,Enterprise,0,0,false,0,Australia,,Signup
+625,2023-07-26,Sales Hub,Professional,0,0,true,0,Canada,,Signup
+626,2024-12-25,Ops Hub,Professional,0,0,true,0,United Kingdom,,Signup
+627,2023-02-13,Marketing Hub,Enterprise,0,0,false,0,Germany,,Signup
+628,2023-11-08,Marketing Hub,Starter,0,0,false,0,Australia,,Signup
+629,2023-11-19,Service Hub,Enterprise,0,0,false,0,United Kingdom,,Signup
+630,2024-08-10,Service Hub,Starter,0,0,false,0,United States,MA,Signup
+631,2024-06-28,Ops Hub,Professional,0,0,false,0,Canada,,Signup
+632,2024-03-10,Ops Hub,Professional,0,0,false,0,India,,Signup
+633,2024-09-16,Service Hub,Professional,0,0,false,0,United Kingdom,,Signup
+634,2023-12-01,CMS Hub,Professional,0,0,false,0,Canada,,Signup
+635,2024-05-24,Sales Hub,Professional,0,0,true,0,Australia,,Signup
+636,2023-07-19,Ops Hub,Professional,0,0,false,0,United States,NC,Signup
+637,2023-03-03,CMS Hub,Enterprise,0,0,false,0,United States,OH,Signup
+638,2023-05-23,Service Hub,Professional,0,0,false,0,Canada,,Signup
+639,2023-07-01,Sales Hub,Professional,0,0,false,0,United States,MA,Signup
+640,2023-01-28,Sales Hub,Professional,0,0,false,0,United States,MI,Signup
+641,2023-08-24,Sales Hub,Starter,0,0,false,0,United States,MI,Signup
+642,2023-11-07,CMS Hub,Professional,0,0,true,0,United States,TX,Signup
+643,2024-07-26,Sales Hub,Enterprise,0,0,false,0,United States,TX,Signup
+644,2024-07-09,CMS Hub,Professional,0,0,false,0,Canada,,Signup
+645,2024-11-25,Service Hub,Starter,0,0,false,0,United Kingdom,,Signup
+646,2024-09-16,Sales Hub,Professional,0,0,false,0,United Kingdom,,Signup
+647,2023-05-13,Ops Hub,Starter,0,0,false,0,Germany,,Signup
+648,2023-04-04,CMS Hub,Starter,0,0,false,0,India,,Signup
+649,2023-10-10,Ops Hub,Starter,0,0,false,0,India,,Signup
+650,2023-03-15,Ops Hub,Enterprise,0,0,true,0,India,,Signup
+651,2023-10-28,Sales Hub,Enterprise,0,0,false,0,India,,Signup
+652,2024-01-26,Ops Hub,Professional,0,0,false,0,United Kingdom,,Signup
+653,2024-10-27,Marketing Hub,Professional,0,0,false,0,Canada,,Signup
+654,2024-10-20,CMS Hub,Enterprise,0,0,false,0,United Kingdom,,Signup
+655,2024-02-21,Sales Hub,Starter,0,0,false,0,Australia,,Signup
+656,2023-09-13,Sales Hub,Starter,0,0,false,0,India,,Signup
+657,2024-03-06,Service Hub,Professional,0,0,false,0,Australia,,Signup
+658,2023-10-04,Service Hub,Enterprise,0,0,true,0,United Kingdom,,Signup
+659,2023-03-24,Marketing Hub,Professional,0,0,false,0,United Kingdom,,Signup
+660,2024-11-13,Service Hub,Starter,0,0,false,0,United Kingdom,,Signup
+661,2023-01-29,Marketing Hub,Professional,0,0,false,0,Australia,,Signup
+662,2024-02-21,Service Hub,Starter,0,0,false,0,India,,Signup
+663,2023-10-28,Marketing Hub,Professional,0,0,false,0,United States,GA,Signup
+664,2024-08-23,Sales Hub,Enterprise,0,0,false,0,Germany,,Signup
+665,2024-08-01,Sales Hub,Professional,0,0,false,0,Canada,,Signup
+666,2024-07-01,Ops Hub,Professional,0,0,false,0,India,,Signup
+667,2023-10-12,Sales Hub,Starter,0,0,false,0,Germany,,Signup
+668,2024-11-13,Marketing Hub,Enterprise,0,0,false,0,Canada,,Signup
+669,2023-10-30,Service Hub,Enterprise,0,0,true,0,United Kingdom,,Signup
+670,2024-11-09,Service Hub,Enterprise,0,0,true,0,United States,FL,Signup
+671,2024-04-18,Ops Hub,Enterprise,0,0,true,0,Australia,,Signup
+672,2023-10-13,Ops Hub,Enterprise,0,0,false,0,United States,OH,Signup
+673,2024-05-17,Service Hub,Professional,0,0,false,0,Australia,,Signup
+674,2023-02-11,Marketing Hub,Enterprise,0,0,false,0,Canada,,Signup
+675,2024-10-11,Service Hub,Professional,0,0,false,0,Canada,,Signup
+676,2023-04-03,Sales Hub,Starter,0,0,false,0,United Kingdom,,Signup
+677,2024-08-31,Sales Hub,Starter,0,0,false,0,United States,VA,Signup
+678,2024-12-24,Ops Hub,Professional,0,0,false,0,Germany,,Signup
+679,2023-09-28,Marketing Hub,Enterprise,0,0,false,0,Canada,,Signup
+680,2023-01-16,Sales Hub,Professional,0,0,false,0,United States,WA,Signup
+681,2023-04-23,Sales Hub,Professional,0,0,true,0,India,,Signup
+682,2023-11-04,Marketing Hub,Enterprise,0,0,false,0,Germany,,Signup
+683,2023-09-28,Ops Hub,Enterprise,0,0,false,0,India,,Signup
+684,2024-03-14,Sales Hub,Enterprise,0,0,false,0,Canada,,Signup
+685,2023-06-29,Ops Hub,Starter,0,0,false,0,Canada,,Signup
+686,2023-05-31,CMS Hub,Professional,0,0,false,0,India,,Signup
+687,2024-05-15,Service Hub,Professional,0,0,false,0,Canada,,Signup
+688,2023-06-25,CMS Hub,Starter,0,0,false,0,India,,Signup
+689,2023-12-15,Sales Hub,Enterprise,0,0,false,0,United States,GA,Signup
+690,2024-06-03,Service Hub,Enterprise,0,0,false,0,Canada,,Signup
+691,2023-07-10,Sales Hub,Starter,0,0,false,0,India,,Signup
+692,2023-12-18,Ops Hub,Starter,0,0,false,0,United States,CA,Signup
+693,2023-11-07,Marketing Hub,Enterprise,0,0,false,0,United States,CA,Signup
+694,2024-08-23,Ops Hub,Professional,0,0,false,0,United Kingdom,,Signup
+695,2023-02-08,CMS Hub,Professional,0,0,false,0,United Kingdom,,Signup
+696,2023-12-07,Sales Hub,Enterprise,0,0,false,0,United States,PA,Signup
+697,2023-11-02,Marketing Hub,Enterprise,0,0,false,0,Australia,,Signup
+698,2024-03-30,CMS Hub,Professional,0,0,true,0,India,,Signup
+699,2024-03-08,Ops Hub,Enterprise,0,0,false,0,Canada,,Signup
+700,2024-02-18,Service Hub,Enterprise,0,0,false,0,Australia,,Signup
+701,2024-08-31,Sales Hub,Enterprise,0,1,true,0,Australia,,Trial
+702,2024-08-09,Ops Hub,Professional,0,1,true,0,Canada,,Trial
+703,2024-11-22,Service Hub,Starter,0,1,false,0,United States,WA,Trial
+704,2024-08-30,CMS Hub,Enterprise,0,1,true,0,India,,Trial
+705,2023-06-19,Ops Hub,Starter,0,1,false,0,Australia,,Trial
+706,2023-01-03,Service Hub,Enterprise,0,1,true,0,Australia,,Trial
+707,2023-12-05,Ops Hub,Enterprise,0,1,false,0,India,,Trial
+708,2024-04-22,CMS Hub,Starter,0,1,false,0,Canada,,Trial
+709,2024-01-20,Sales Hub,Starter,0,1,false,0,Canada,,Trial
+710,2024-12-11,Marketing Hub,Starter,0,1,false,0,United States,VA,Trial
+711,2023-11-08,Marketing Hub,Professional,0,1,false,0,India,,Trial
+712,2024-03-02,CMS Hub,Professional,0,1,false,0,Australia,,Trial
+713,2023-10-05,Marketing Hub,Professional,0,1,false,0,Germany,,Trial
+714,2023-11-19,Service Hub,Enterprise,0,1,false,0,United Kingdom,,Trial
+715,2024-03-08,Sales Hub,Enterprise,0,1,false,0,Germany,,Trial
+716,2024-01-21,CMS Hub,Starter,0,1,false,0,India,,Trial
+717,2023-05-17,Sales Hub,Professional,0,1,false,0,Canada,,Trial
+718,2024-01-21,Ops Hub,Professional,0,1,true,0,United States,WA,Trial
+719,2023-07-10,Service Hub,Starter,0,1,false,0,United States,CA,Trial
+720,2023-12-10,Service Hub,Professional,0,1,false,0,Germany,,Trial
+721,2023-02-04,CMS Hub,Professional,0,1,false,0,Germany,,Trial
+722,2023-01-05,CMS Hub,Starter,0,1,false,0,Canada,,Trial
+723,2023-10-20,Sales Hub,Enterprise,0,1,true,0,Canada,,Trial
+724,2023-05-12,Sales Hub,Professional,0,1,true,0,United Kingdom,,Trial
+725,2023-02-27,Marketing Hub,Professional,0,1,true,0,Germany,,Trial
+726,2024-10-01,Ops Hub,Starter,0,1,true,0,United Kingdom,,Trial
+727,2024-10-06,Ops Hub,Professional,0,1,true,0,Germany,,Trial
+728,2024-11-05,Sales Hub,Starter,0,1,false,0,India,,Trial
+729,2024-10-02,Sales Hub,Enterprise,0,1,true,0,Germany,,Trial
+730,2024-10-24,CMS Hub,Professional,0,1,false,0,Canada,,Trial
+731,2023-03-16,Ops Hub,Professional,0,1,true,0,United Kingdom,,Trial
+732,2023-12-11,Service Hub,Professional,0,1,false,0,Australia,,Trial
+733,2024-09-03,Ops Hub,Starter,0,1,false,0,United Kingdom,,Trial
+734,2024-09-30,Service Hub,Professional,0,1,false,0,Germany,,Trial
+735,2023-06-14,Ops Hub,Professional,0,1,false,0,Canada,,Trial
+736,2024-06-05,Sales Hub,Professional,0,1,true,0,Canada,,Trial
+737,2023-07-04,Service Hub,Starter,0,1,false,0,United States,NJ,Trial
+738,2023-11-21,Ops Hub,Enterprise,0,1,true,0,United States,WA,Trial
+739,2023-01-23,Sales Hub,Starter,0,1,false,0,India,,Trial
+740,2023-03-19,Service Hub,Enterprise,0,1,true,0,Germany,,Trial
+741,2024-05-01,CMS Hub,Enterprise,0,1,false,0,United Kingdom,,Trial
+742,2023-11-25,CMS Hub,Professional,0,1,false,0,India,,Trial
+743,2024-12-11,Service Hub,Professional,0,1,false,0,Australia,,Trial
+744,2024-05-21,Marketing Hub,Starter,0,1,false,0,Australia,,Trial
+745,2023-04-01,Service Hub,Professional,0,1,false,0,Germany,,Trial
+746,2023-07-14,Sales Hub,Enterprise,0,1,false,0,Australia,,Trial
+747,2024-06-13,Service Hub,Professional,0,1,false,0,United Kingdom,,Trial
+748,2023-01-07,CMS Hub,Professional,0,1,true,0,Canada,,Trial
+749,2024-08-25,Sales Hub,Enterprise,0,1,false,0,United Kingdom,,Trial
+750,2023-03-22,Marketing Hub,Enterprise,0,1,false,0,Germany,,Trial
+751,2024-06-05,Ops Hub,Enterprise,0,1,false,0,Australia,,Trial
+752,2023-05-12,Service Hub,Enterprise,0,1,true,0,Canada,,Trial
+753,2023-08-23,Sales Hub,Enterprise,0,1,false,0,Germany,,Trial
+754,2024-05-27,Service Hub,Enterprise,0,1,false,0,United Kingdom,,Trial
+755,2024-05-21,Sales Hub,Professional,0,1,false,0,Australia,,Trial
+756,2024-05-04,Service Hub,Enterprise,0,1,true,0,Germany,,Trial
+757,2023-10-18,Sales Hub,Professional,0,1,false,0,India,,Trial
+758,2023-07-13,Ops Hub,Professional,0,1,false,0,Canada,,Trial
+759,2023-10-21,CMS Hub,Professional,0,1,true,0,United Kingdom,,Trial
+760,2023-11-22,Ops Hub,Starter,0,1,false,0,United Kingdom,,Trial
+761,2024-12-30,Service Hub,Enterprise,0,1,false,0,United Kingdom,,Trial
+762,2023-12-31,Ops Hub,Enterprise,0,1,false,0,Australia,,Trial
+763,2023-11-16,Service Hub,Professional,0,1,true,0,Germany,,Trial
+764,2023-10-15,Marketing Hub,Professional,0,1,false,0,India,,Trial
+765,2024-08-16,Marketing Hub,Starter,0,1,true,0,India,,Trial
+766,2024-12-08,Sales Hub,Starter,0,1,false,0,Australia,,Trial
+767,2023-12-18,Sales Hub,Professional,0,1,false,0,India,,Trial
+768,2024-11-16,Marketing Hub,Starter,0,1,false,0,Germany,,Trial
+769,2024-11-12,CMS Hub,Enterprise,0,1,true,0,United States,IL,Trial
+770,2024-08-02,Marketing Hub,Starter,0,1,false,0,India,,Trial
+771,2023-12-24,CMS Hub,Starter,0,1,false,0,United Kingdom,,Trial
+772,2023-08-13,CMS Hub,Enterprise,0,1,true,0,United States,PA,Trial
+773,2024-12-22,Sales Hub,Professional,0,1,false,0,Germany,,Trial
+774,2023-10-22,Service Hub,Professional,0,1,false,0,United Kingdom,,Trial
+775,2024-08-25,Sales Hub,Starter,0,1,true,0,Canada,,Trial
+776,2024-09-26,CMS Hub,Professional,0,1,true,0,United States,NJ,Trial
+777,2024-07-05,Service Hub,Starter,0,1,false,0,India,,Trial
+778,2024-03-06,Ops Hub,Starter,0,1,false,0,United States,VA,Trial
+779,2023-11-03,CMS Hub,Enterprise,0,1,false,0,Canada,,Trial
+780,2023-06-17,Sales Hub,Professional,0,1,false,0,United States,WA,Trial
+781,2023-01-15,CMS Hub,Professional,0,1,true,0,United Kingdom,,Trial
+782,2023-12-03,Marketing Hub,Professional,0,1,false,0,Australia,,Trial
+783,2023-12-09,Service Hub,Professional,0,1,false,0,United States,IL,Trial
+784,2024-10-25,CMS Hub,Enterprise,0,1,false,0,United States,WA,Trial
+785,2023-11-30,CMS Hub,Professional,0,1,false,0,United States,FL,Trial
+786,2023-05-11,Marketing Hub,Enterprise,0,1,true,0,United States,NY,Trial
+787,2024-07-20,Ops Hub,Professional,0,1,false,0,United States,TX,Trial
+788,2023-02-23,CMS Hub,Professional,0,1,false,0,Canada,,Trial
+789,2023-09-27,Marketing Hub,Enterprise,0,1,false,0,United States,OH,Trial
+790,2023-01-23,Marketing Hub,Professional,0,1,false,0,United States,NY,Trial
+791,2024-01-17,Service Hub,Enterprise,0,1,true,0,Germany,,Trial
+792,2023-11-28,Sales Hub,Starter,0,1,false,0,Canada,,Trial
+793,2023-06-17,Sales Hub,Enterprise,0,1,false,0,United States,OH,Trial
+794,2024-01-05,Marketing Hub,Professional,0,1,false,0,United States,NC,Trial
+795,2023-01-12,Ops Hub,Starter,0,1,false,0,Germany,,Trial
+796,2024-08-01,Marketing Hub,Enterprise,0,1,false,0,United Kingdom,,Trial
+797,2023-01-20,Ops Hub,Enterprise,0,1,true,0,Australia,,Trial
+798,2023-03-17,Marketing Hub,Enterprise,0,1,false,0,Australia,,Trial
+799,2023-03-01,CMS Hub,Professional,0,1,false,0,Germany,,Trial
+800,2023-07-01,Ops Hub,Starter,0,1,true,0,Germany,,Trial
+801,2024-05-06,Ops Hub,Starter,0,1,false,0,India,,Trial
+802,2024-08-31,Marketing Hub,Professional,0,1,false,0,Canada,,Trial
+803,2023-12-06,Ops Hub,Starter,0,1,false,0,Germany,,Trial
+804,2024-09-08,Service Hub,Professional,0,1,false,0,United States,VA,Trial
+805,2023-06-25,Marketing Hub,Professional,0,1,false,0,United Kingdom,,Trial
+806,2023-05-13,Marketing Hub,Professional,0,1,false,0,United Kingdom,,Trial
+807,2024-08-22,Marketing Hub,Enterprise,0,1,false,0,Canada,,Trial
+808,2023-05-23,Ops Hub,Professional,0,1,false,0,Australia,,Trial
+809,2024-02-19,Sales Hub,Professional,0,1,false,0,United States,NY,Trial
+810,2024-09-02,Service Hub,Enterprise,0,1,false,0,Germany,,Trial
+811,2024-01-30,Marketing Hub,Enterprise,0,1,false,0,Canada,,Trial
+812,2023-12-18,Marketing Hub,Enterprise,0,1,true,0,Canada,,Trial
+813,2023-07-12,Ops Hub,Starter,0,1,false,0,Germany,,Trial
+814,2024-12-02,Ops Hub,Starter,0,1,false,0,United States,OH,Trial
+815,2024-10-05,Ops Hub,Professional,0,1,false,0,United Kingdom,,Trial
+816,2023-02-20,Sales Hub,Professional,0,1,true,0,Australia,,Trial
+817,2024-05-28,CMS Hub,Starter,0,1,false,0,Canada,,Trial
+818,2024-09-25,Sales Hub,Professional,0,1,false,0,Germany,,Trial
+819,2023-05-12,CMS Hub,Enterprise,0,1,true,0,India,,Trial
+820,2024-07-02,Ops Hub,Professional,0,1,false,0,Germany,,Trial
+821,2024-11-02,Sales Hub,Starter,0,1,false,0,Australia,,Trial
+822,2023-07-08,Marketing Hub,Enterprise,0,1,true,0,United Kingdom,,Trial
+823,2023-11-11,Service Hub,Starter,0,1,false,0,Germany,,Trial
+824,2023-01-14,Sales Hub,Enterprise,0,1,true,0,Australia,,Trial
+825,2024-10-14,CMS Hub,Enterprise,0,1,false,0,Germany,,Trial
+826,2024-03-04,Marketing Hub,Starter,0,1,false,0,Australia,,Trial
+827,2024-05-20,CMS Hub,Starter,0,1,false,0,Germany,,Trial
+828,2024-03-10,CMS Hub,Enterprise,0,1,true,0,United Kingdom,,Trial
+829,2023-02-24,Sales Hub,Enterprise,0,1,false,0,Canada,,Trial
+830,2023-12-20,Sales Hub,Professional,0,1,false,0,United States,GA,Trial
+831,2024-09-21,CMS Hub,Starter,0,1,false,0,United States,NC,Trial
+832,2023-09-12,Service Hub,Professional,0,1,true,0,Germany,,Trial
+833,2024-09-09,CMS Hub,Enterprise,0,1,true,0,United Kingdom,,Trial
+834,2024-05-17,Marketing Hub,Professional,0,1,true,0,United States,VA,Trial
+835,2023-02-24,CMS Hub,Starter,0,1,false,0,Australia,,Trial
+836,2023-03-21,Sales Hub,Enterprise,0,1,false,0,Canada,,Trial
+837,2023-11-05,CMS Hub,Starter,0,1,false,0,United Kingdom,,Trial
+838,2024-09-06,Ops Hub,Professional,0,1,true,0,Germany,,Trial
+839,2023-08-23,Sales Hub,Starter,0,1,false,0,India,,Trial
+840,2024-10-16,CMS Hub,Professional,0,1,false,0,India,,Trial
+841,2024-05-01,Marketing Hub,Professional,0,1,false,0,Germany,,Trial
+842,2024-06-30,CMS Hub,Enterprise,0,1,false,0,India,,Trial
+843,2023-02-27,Service Hub,Professional,0,1,false,0,United Kingdom,,Trial
+844,2023-10-11,Ops Hub,Professional,0,1,false,0,United States,NC,Trial
+845,2024-04-05,Ops Hub,Starter,0,1,true,0,India,,Trial
+846,2023-05-05,Ops Hub,Professional,0,1,true,0,United States,MI,Trial
+847,2024-01-21,Ops Hub,Enterprise,0,1,false,0,United States,IL,Trial
+848,2023-10-20,CMS Hub,Professional,0,1,false,0,United States,MA,Trial
+849,2024-03-21,Sales Hub,Professional,0,1,false,0,United Kingdom,,Trial
+850,2024-12-06,Service Hub,Enterprise,0,1,true,0,Germany,,Trial
+851,2023-12-07,Marketing Hub,Starter,0,1,false,0,Germany,,Trial
+852,2023-11-03,Service Hub,Enterprise,0,1,false,0,United States,OH,Trial
+853,2023-01-26,Sales Hub,Professional,0,1,true,0,United Kingdom,,Trial
+854,2024-10-28,Service Hub,Professional,0,1,false,0,Canada,,Trial
+855,2023-02-10,Ops Hub,Enterprise,0,1,false,0,Germany,,Trial
+856,2023-10-13,CMS Hub,Enterprise,0,1,true,0,Canada,,Trial
+857,2024-11-24,Sales Hub,Starter,0,1,false,0,Canada,,Trial
+858,2024-02-29,CMS Hub,Starter,0,1,false,0,Germany,,Trial
+859,2024-10-14,Service Hub,Professional,0,1,false,0,Canada,,Trial
+860,2023-02-11,Service Hub,Professional,0,1,false,0,India,,Trial
+861,2024-01-23,CMS Hub,Enterprise,0,1,false,0,Germany,,Trial
+862,2023-03-21,CMS Hub,Starter,0,1,false,0,Canada,,Trial
+863,2024-12-12,Sales Hub,Professional,0,1,false,0,India,,Trial
+864,2023-12-29,Sales Hub,Professional,0,1,false,0,India,,Trial
+865,2023-08-26,Marketing Hub,Professional,0,1,false,0,United Kingdom,,Trial
+866,2023-07-04,Ops Hub,Enterprise,0,1,false,0,India,,Trial
+867,2024-02-08,CMS Hub,Enterprise,0,1,false,0,India,,Trial
+868,2024-12-26,Sales Hub,Professional,0,1,false,0,Canada,,Trial
+869,2023-12-08,CMS Hub,Starter,0,1,false,0,Canada,,Trial
+870,2023-03-05,Marketing Hub,Starter,0,1,true,0,Australia,,Trial
+871,2023-09-18,CMS Hub,Enterprise,0,1,true,0,United Kingdom,,Trial
+872,2023-10-27,Ops Hub,Starter,0,1,false,0,India,,Trial
+873,2024-09-19,Sales Hub,Enterprise,0,1,false,0,Australia,,Trial
+874,2024-12-14,Sales Hub,Professional,0,1,false,0,United Kingdom,,Trial
+875,2024-07-02,CMS Hub,Professional,0,1,false,0,Canada,,Trial
+876,2023-02-02,Ops Hub,Enterprise,0,1,true,0,Germany,,Trial
+877,2024-07-07,Marketing Hub,Professional,0,1,false,0,India,,Trial
+878,2024-12-24,CMS Hub,Starter,0,1,false,0,India,,Trial
+879,2024-01-05,Sales Hub,Enterprise,0,1,false,0,Canada,,Trial
+880,2023-02-24,Marketing Hub,Professional,0,1,false,0,Australia,,Trial
+881,2024-12-20,Ops Hub,Professional,0,1,false,0,Germany,,Trial
+882,2024-12-21,Ops Hub,Starter,0,1,true,0,India,,Trial
+883,2024-05-02,CMS Hub,Enterprise,0,1,false,0,India,,Trial
+884,2023-01-22,Sales Hub,Professional,0,1,true,0,Canada,,Trial
+885,2024-03-17,Marketing Hub,Enterprise,0,1,false,0,Australia,,Trial
+886,2023-10-16,Ops Hub,Starter,0,1,true,0,Germany,,Trial
+887,2024-09-19,Marketing Hub,Professional,0,1,false,0,Canada,,Trial
+888,2024-05-30,Sales Hub,Starter,0,1,false,0,United States,NC,Trial
+889,2024-09-24,Sales Hub,Enterprise,0,1,false,0,Canada,,Trial
+890,2024-06-28,Marketing Hub,Enterprise,0,1,true,0,United Kingdom,,Trial
+891,2024-11-14,Service Hub,Enterprise,0,1,false,0,Germany,,Trial
+892,2023-10-31,Ops Hub,Professional,0,1,false,0,Australia,,Trial
+893,2024-03-20,Sales Hub,Starter,0,1,false,0,Canada,,Trial
+894,2024-04-23,Marketing Hub,Starter,0,1,false,0,Canada,,Trial
+895,2023-01-24,Marketing Hub,Starter,0,1,false,0,United Kingdom,,Trial
+896,2024-07-04,Ops Hub,Starter,0,1,false,0,Germany,,Trial
+897,2024-05-02,Sales Hub,Enterprise,0,1,false,0,Germany,,Trial
+898,2024-10-25,Marketing Hub,Enterprise,0,1,false,0,United States,NJ,Trial
+899,2024-09-01,Service Hub,Starter,0,1,false,0,Canada,,Trial
+900,2023-09-26,CMS Hub,Professional,0,1,false,0,Germany,,Trial
+901,2023-04-16,Service Hub,Enterprise,376.13,4,false,1504.51,India,,Paid
+902,2024-05-11,Marketing Hub,Enterprise,739.57,7,false,5176.97,Australia,,Paid
+903,2023-09-27,CMS Hub,Starter,41.64,14,false,582.93,Australia,,Paid
+904,2024-03-04,Sales Hub,Enterprise,991.66,18,false,17849.89,Canada,,Paid
+905,2024-05-19,Service Hub,Enterprise,931.91,22,false,20501.98,India,,Paid
+906,2023-01-23,Marketing Hub,Starter,14.63,1,false,14.63,United Kingdom,,Paid
+907,2024-05-07,Service Hub,Enterprise,229.61,5,false,1148.05,United Kingdom,,Paid
+908,2023-12-30,Marketing Hub,Enterprise,942.9,13,false,12257.69,Canada,,Paid
+909,2024-08-30,CMS Hub,Starter,19.21,12,false,230.51,India,,Paid
+910,2023-08-21,Service Hub,Professional,101.26,1,false,101.26,United Kingdom,,Paid
+911,2023-10-23,Sales Hub,Professional,183.47,9,false,1651.26,United Kingdom,,Paid
+912,2023-07-10,CMS Hub,Professional,170.23,22,false,3745.02,United States,MA,Paid
+913,2023-08-02,Marketing Hub,Starter,24.38,2,false,48.75,India,,Paid
+914,2023-03-07,CMS Hub,Starter,11.32,16,false,181.14,Canada,,Paid
+915,2024-02-21,Ops Hub,Professional,194.84,2,false,389.68,United Kingdom,,Paid
+916,2023-09-05,Ops Hub,Enterprise,520.34,19,false,9886.37,United States,NY,Paid
+917,2024-05-07,CMS Hub,Professional,113.55,10,false,1135.53,United Kingdom,,Paid
+918,2024-10-13,Marketing Hub,Starter,25.01,12,false,300.17,Canada,,Paid
+919,2023-09-02,Sales Hub,Starter,13.09,2,false,26.19,United States,NY,Paid
+920,2023-05-23,Sales Hub,Enterprise,700.02,3,false,2100.07,Germany,,Paid
+921,2023-07-29,Service Hub,Starter,31.34,19,false,595.53,Germany,,Paid
+922,2023-10-23,Service Hub,Professional,103.81,20,false,2076.14,Canada,,Paid
+923,2023-02-15,Sales Hub,Starter,47.76,9,false,429.8,United Kingdom,,Paid
+924,2023-07-24,CMS Hub,Enterprise,275.44,4,false,1101.75,Australia,,Paid
+925,2024-11-09,CMS Hub,Professional,227.7,9,false,2049.29,India,,Paid
+926,2024-08-04,Service Hub,Enterprise,783.23,24,false,18797.58,United States,GA,Paid
+927,2024-01-10,Sales Hub,Starter,28.78,22,false,633.26,Germany,,Paid
+928,2024-07-10,Marketing Hub,Starter,29.03,15,false,435.5,India,,Paid
+929,2023-03-01,Marketing Hub,Enterprise,408.78,12,false,4905.38,India,,Paid
+930,2023-06-12,CMS Hub,Starter,15.12,1,false,15.12,India,,Paid
+931,2024-02-26,Service Hub,Professional,232.27,12,false,2787.24,Germany,,Paid
+932,2023-10-20,Ops Hub,Professional,97.17,17,false,1651.9,United Kingdom,,Paid
+933,2024-11-23,Service Hub,Enterprise,824.63,15,false,12369.52,Germany,,Paid
+934,2023-07-09,CMS Hub,Starter,31.03,13,true,403.33,United States,WA,Paid
+935,2023-12-04,CMS Hub,Professional,146.5,19,false,2783.57,United Kingdom,,Paid
+936,2024-02-13,Ops Hub,Professional,229.87,20,false,4597.4,United States,TX,Paid
+937,2024-08-24,Ops Hub,Enterprise,757.79,19,true,14397.93,United States,TX,Paid
+938,2024-09-30,CMS Hub,Professional,168.95,16,true,2703.22,Australia,,Paid
+939,2023-10-03,Marketing Hub,Professional,248.82,23,false,5722.92,Germany,,Paid
+940,2023-08-20,Service Hub,Starter,30.72,14,false,430.1,United Kingdom,,Paid
+941,2023-02-03,Ops Hub,Starter,48.38,4,true,193.53,Canada,,Paid
+942,2023-10-20,CMS Hub,Starter,36.82,13,false,478.69,United States,FL,Paid
+943,2024-11-04,Ops Hub,Professional,97.68,18,false,1758.29,United Kingdom,,Paid
+944,2023-05-18,Marketing Hub,Enterprise,710.28,2,true,1420.56,Canada,,Paid
+945,2023-07-05,Sales Hub,Starter,14.86,3,false,44.57,United States,OH,Paid
+946,2023-03-13,Sales Hub,Enterprise,226.14,1,false,226.14,Germany,,Paid
+947,2023-05-13,Service Hub,Professional,146.64,1,false,146.64,United Kingdom,,Paid
+948,2023-03-08,Ops Hub,Professional,77.98,24,false,1871.4,United Kingdom,,Paid
+949,2024-04-08,Sales Hub,Starter,46.91,22,false,1032.1,India,,Paid
+950,2024-07-26,Service Hub,Starter,46.5,14,false,651.04,Canada,,Paid
+951,2024-09-15,Marketing Hub,Starter,35.48,6,false,212.89,Australia,,Paid
+952,2023-06-29,Service Hub,Enterprise,354.21,23,false,8146.86,Canada,,Paid
+953,2023-07-09,Sales Hub,Starter,20.29,5,false,101.44,India,,Paid
+954,2024-11-27,Sales Hub,Enterprise,605.66,24,true,14535.81,Australia,,Paid
+955,2024-08-22,Sales Hub,Starter,24.51,20,false,490.27,United Kingdom,,Paid
+956,2023-11-03,Sales Hub,Starter,14.99,22,false,329.82,Germany,,Paid
+957,2023-04-12,Service Hub,Starter,47.06,14,true,658.89,United States,GA,Paid
+958,2023-07-22,Marketing Hub,Professional,119.17,11,false,1310.92,United States,OH,Paid
+959,2023-05-25,CMS Hub,Enterprise,409.99,17,true,6969.81,United States,IL,Paid
+960,2023-04-16,CMS Hub,Enterprise,950.81,4,false,3803.23,Germany,,Paid
+961,2023-10-16,Marketing Hub,Professional,194.35,12,true,2332.16,United States,PA,Paid
+962,2024-06-22,Service Hub,Professional,108.52,6,false,651.15,India,,Paid
+963,2023-03-29,CMS Hub,Professional,88.67,6,false,532.03,India,,Paid
+964,2024-07-17,Service Hub,Enterprise,521.06,11,true,5731.65,Canada,,Paid
+965,2023-07-11,CMS Hub,Professional,193.49,7,false,1354.46,Canada,,Paid
+966,2024-10-02,Service Hub,Professional,223.62,23,false,5143.22,United Kingdom,,Paid
+967,2023-06-10,Service Hub,Enterprise,500.29,19,false,9505.49,United States,TX,Paid
+968,2023-10-04,Ops Hub,Professional,129.04,4,false,516.15,United Kingdom,,Paid
+969,2023-05-08,CMS Hub,Enterprise,234.12,14,false,3277.68,Germany,,Paid
+970,2024-05-24,CMS Hub,Starter,49.3,19,false,936.61,India,,Paid
+971,2024-05-03,Ops Hub,Starter,40.05,17,false,680.93,United States,MA,Paid
+972,2024-09-07,CMS Hub,Enterprise,212.87,9,false,1915.85,India,,Paid
+973,2023-12-09,Sales Hub,Starter,46.25,1,false,46.25,United Kingdom,,Paid
+974,2024-08-06,Sales Hub,Professional,157.53,4,false,630.13,Canada,,Paid
+975,2024-12-24,Ops Hub,Enterprise,912.81,4,true,3651.23,Australia,,Paid
+976,2023-01-17,Ops Hub,Professional,62.62,12,false,751.49,Australia,,Paid
+977,2024-05-11,Service Hub,Enterprise,942.23,4,false,3768.91,United States,FL,Paid
+978,2023-07-11,Ops Hub,Enterprise,867.35,19,false,16479.72,United Kingdom,,Paid
+979,2023-04-13,CMS Hub,Starter,40.15,10,true,401.45,Germany,,Paid
+980,2024-03-26,Ops Hub,Professional,236.12,1,false,236.12,India,,Paid
+981,2023-10-11,CMS Hub,Professional,238.33,3,false,714.98,United Kingdom,,Paid
+982,2024-03-27,Marketing Hub,Enterprise,545.26,10,false,5452.64,United States,TX,Paid
+983,2023-07-21,CMS Hub,Starter,20.41,6,false,122.45,Germany,,Paid
+984,2024-09-07,Ops Hub,Professional,98.88,1,false,98.88,United Kingdom,,Paid
+985,2023-09-09,Sales Hub,Enterprise,824.31,9,false,7418.8,United Kingdom,,Paid
+986,2023-12-13,CMS Hub,Enterprise,322.11,12,false,3865.37,Australia,,Paid
+987,2023-03-11,Service Hub,Professional,150.16,18,false,2702.96,United Kingdom,,Paid
+988,2024-12-02,Marketing Hub,Starter,35.89,22,false,789.68,Canada,,Paid
+989,2023-07-12,Sales Hub,Starter,48.39,4,true,193.57,Australia,,Paid
+990,2024-12-18,Sales Hub,Starter,26.55,16,false,424.74,Germany,,Paid
+991,2023-03-08,Marketing Hub,Starter,45.3,14,false,634.26,United States,WA,Paid
+992,2023-05-14,CMS Hub,Professional,133.62,12,false,1603.43,Australia,,Paid
+993,2023-04-17,Marketing Hub,Enterprise,522.46,9,false,4702.15,Australia,,Paid
+994,2024-07-17,Service Hub,Professional,144.77,18,false,2605.81,Canada,,Paid
+995,2024-09-21,Sales Hub,Professional,129.92,23,false,2988.21,United Kingdom,,Paid
+996,2023-12-16,Service Hub,Professional,226.22,17,false,3845.73,Australia,,Paid
+997,2024-09-24,Ops Hub,Professional,110.63,22,true,2433.92,India,,Paid
+998,2024-12-06,Marketing Hub,Starter,37.93,4,true,151.72,Germany,,Paid
+999,2024-05-14,Marketing Hub,Professional,139.22,5,false,696.12,United States,FL,Paid
+1000,2024-01-29,CMS Hub,Enterprise,365.42,10,false,3654.23,India,,Paid
+1,2023-11-07,Marketing Hub,Enterprise,0,0,false,0,Germany,,Visitor
+2,2024-01-31,CMS Hub,Enterprise,0,0,false,0,India,,Visitor
+3,2023-07-27,Marketing Hub,Professional,0,0,false,0,United States,MA,Visitor
+4,2023-02-16,Ops Hub,Starter,0,0,false,0,United Kingdom,,Visitor
+5,2024-06-26,Sales Hub,Starter,0,0,false,0,United Kingdom,,Visitor
+6,2023-11-12,Ops Hub,Starter,0,0,false,0,United Kingdom,,Visitor
+7,2023-01-30,Sales Hub,Professional,0,0,false,0,United States,FL,Visitor
+8,2023-03-06,Service Hub,Enterprise,0,0,false,0,United States,CA,Visitor
+9,2024-09-26,Sales Hub,Enterprise,0,0,false,0,United States,PA,Visitor
+10,2023-12-03,Sales Hub,Starter,0,0,false,0,Canada,,Visitor
+11,2024-05-07,Sales Hub,Professional,0,0,false,0,Canada,,Visitor
+12,2023-01-05,Marketing Hub,Enterprise,0,0,false,0,United States,CA,Visitor
+13,2023-05-09,Sales Hub,Enterprise,0,0,false,0,India,,Visitor
+14,2023-05-25,Marketing Hub,Professional,0,0,false,0,Australia,,Visitor
+15,2024-02-11,Marketing Hub,Starter,0,0,false,0,Canada,,Visitor
+16,2023-11-20,Marketing Hub,Enterprise,0,0,false,0,Australia,,Visitor
+17,2024-04-20,CMS Hub,Starter,0,0,false,0,Canada,,Visitor
+18,2024-04-25,CMS Hub,Professional,0,0,false,0,Germany,,Visitor
+19,2024-01-03,Service Hub,Enterprise,0,0,false,0,India,,Visitor
+20,2023-03-09,Sales Hub,Professional,0,0,false,0,Germany,,Visitor
+21,2023-04-09,CMS Hub,Enterprise,0,0,false,0,Canada,,Visitor
+22,2024-02-27,Service Hub,Enterprise,0,0,false,0,Canada,,Visitor
+23,2024-08-23,Ops Hub,Starter,0,0,false,0,Australia,,Visitor
+24,2024-01-04,Marketing Hub,Starter,0,0,false,0,Australia,,Visitor
+25,2024-05-27,Service Hub,Professional,0,0,false,0,Australia,,Visitor
+26,2024-06-13,Service Hub,Enterprise,0,0,false,0,United States,NC,Visitor
+27,2023-10-17,Sales Hub,Starter,0,0,false,0,Canada,,Visitor
+28,2024-05-23,Service Hub,Starter,0,0,false,0,United Kingdom,,Visitor
+29,2023-12-17,Service Hub,Professional,0,0,false,0,Germany,,Visitor
+30,2023-05-20,Sales Hub,Professional,0,0,false,0,Australia,,Visitor
+31,2023-02-08,Service Hub,Professional,0,0,false,0,Germany,,Visitor
+32,2023-07-23,Service Hub,Enterprise,0,0,false,0,United States,MI,Visitor
+33,2024-08-07,Marketing Hub,Professional,0,0,false,0,Australia,,Visitor
+34,2024-07-22,CMS Hub,Professional,0,0,false,0,United States,WA,Visitor
+35,2023-06-13,Marketing Hub,Professional,0,0,false,0,Canada,,Visitor
+36,2023-12-25,CMS Hub,Professional,0,0,false,0,India,,Visitor
+37,2023-09-10,Ops Hub,Starter,0,0,false,0,Germany,,Visitor
+38,2023-08-04,Marketing Hub,Professional,0,0,false,0,Germany,,Visitor
+39,2024-11-06,Sales Hub,Starter,0,0,false,0,India,,Visitor
+40,2023-08-03,CMS Hub,Starter,0,0,false,0,United States,NY,Visitor
+41,2024-07-21,Marketing Hub,Starter,0,0,false,0,Canada,,Visitor
+42,2024-10-20,CMS Hub,Professional,0,0,false,0,Australia,,Visitor
+43,2023-12-16,CMS Hub,Professional,0,0,false,0,United States,MI,Visitor
+44,2023-11-23,Service Hub,Professional,0,0,false,0,India,,Visitor
+45,2024-01-30,CMS Hub,Enterprise,0,0,false,0,India,,Visitor
+46,2023-11-01,Ops Hub,Enterprise,0,0,false,0,United States,CA,Visitor
+47,2023-08-18,CMS Hub,Enterprise,0,0,false,0,India,,Visitor
+48,2023-08-30,CMS Hub,Starter,0,0,false,0,United Kingdom,,Visitor
+49,2023-06-30,Ops Hub,Enterprise,0,0,false,0,India,,Visitor
+50,2024-11-29,Ops Hub,Enterprise,0,0,false,0,Australia,,Visitor
+51,2024-01-21,Marketing Hub,Professional,0,0,false,0,Canada,,Visitor
+52,2024-08-06,Marketing Hub,Starter,0,0,false,0,Germany,,Visitor
+53,2024-10-15,CMS Hub,Professional,0,0,false,0,Australia,,Visitor
+54,2024-06-24,Ops Hub,Professional,0,0,false,0,India,,Visitor
+55,2024-01-19,Sales Hub,Enterprise,0,0,false,0,United States,NC,Visitor
+56,2024-04-05,Sales Hub,Starter,0,0,false,0,Australia,,Visitor
+57,2023-01-27,Marketing Hub,Professional,0,0,false,0,India,,Visitor
+58,2023-01-11,Sales Hub,Enterprise,0,0,false,0,United Kingdom,,Visitor
+59,2024-04-03,Sales Hub,Starter,0,0,false,0,Canada,,Visitor
+60,2023-03-26,Service Hub,Professional,0,0,false,0,Germany,,Visitor
+61,2024-10-31,Ops Hub,Professional,0,0,false,0,United States,GA,Visitor
+62,2023-02-14,CMS Hub,Enterprise,0,0,false,0,India,,Visitor
+63,2023-09-18,CMS Hub,Starter,0,0,false,0,Canada,,Visitor
+64,2024-12-30,Marketing Hub,Professional,0,0,false,0,United Kingdom,,Visitor
+65,2023-09-16,Service Hub,Enterprise,0,0,false,0,United States,WA,Visitor
+66,2023-03-22,Service Hub,Enterprise,0,0,false,0,Canada,,Visitor
+67,2023-03-15,Sales Hub,Professional,0,0,false,0,Canada,,Visitor
+68,2024-02-19,CMS Hub,Professional,0,0,false,0,United States,NY,Visitor
+69,2023-07-24,Marketing Hub,Enterprise,0,0,false,0,Germany,,Visitor
+70,2024-01-17,Service Hub,Professional,0,0,false,0,Canada,,Visitor
+71,2024-11-17,Service Hub,Starter,0,0,false,0,United States,PA,Visitor
+72,2023-07-24,Sales Hub,Enterprise,0,0,false,0,United States,MA,Visitor
+73,2024-03-29,Sales Hub,Enterprise,0,0,false,0,United Kingdom,,Visitor
+74,2024-02-16,Ops Hub,Enterprise,0,0,false,0,Germany,,Visitor
+75,2023-06-12,Marketing Hub,Enterprise,0,0,false,0,Australia,,Visitor
+76,2024-07-13,Service Hub,Enterprise,0,0,false,0,United States,VA,Visitor
+77,2023-06-09,Service Hub,Enterprise,0,0,false,0,India,,Visitor
+78,2024-01-22,Ops Hub,Professional,0,0,false,0,Australia,,Visitor
+79,2024-02-10,Sales Hub,Starter,0,0,false,0,United States,CA,Visitor
+80,2024-02-11,Ops Hub,Professional,0,0,false,0,United Kingdom,,Visitor
+81,2023-04-27,CMS Hub,Professional,0,0,false,0,United States,CA,Visitor
+82,2023-11-21,Sales Hub,Professional,0,0,false,0,United States,NY,Visitor
+83,2024-06-08,Sales Hub,Starter,0,0,false,0,Australia,,Visitor
+84,2023-12-15,Ops Hub,Enterprise,0,0,false,0,Canada,,Visitor
+85,2024-10-05,Sales Hub,Enterprise,0,0,false,0,United States,FL,Visitor
+86,2023-09-09,CMS Hub,Starter,0,0,false,0,United Kingdom,,Visitor
+87,2024-09-18,Marketing Hub,Starter,0,0,false,0,Germany,,Visitor
+88,2023-09-24,Ops Hub,Enterprise,0,0,false,0,United Kingdom,,Visitor
+89,2024-09-08,Sales Hub,Starter,0,0,false,0,Germany,,Visitor
+90,2023-01-31,Marketing Hub,Starter,0,0,false,0,United States,FL,Visitor
+91,2023-02-04,Service Hub,Starter,0,0,false,0,Australia,,Visitor
+92,2023-05-23,Marketing Hub,Starter,0,0,false,0,India,,Visitor
+93,2024-01-22,CMS Hub,Professional,0,0,false,0,Canada,,Visitor
+94,2024-04-28,Marketing Hub,Starter,0,0,false,0,Canada,,Visitor
+95,2024-01-26,Service Hub,Starter,0,0,false,0,Canada,,Visitor
+96,2024-07-05,CMS Hub,Professional,0,0,false,0,Australia,,Visitor
+97,2024-06-07,Service Hub,Professional,0,0,false,0,Germany,,Visitor
+98,2024-10-27,Marketing Hub,Enterprise,0,0,false,0,India,,Visitor
+99,2023-02-28,Ops Hub,Enterprise,0,0,false,0,United Kingdom,,Visitor
+100,2024-09-13,Sales Hub,Professional,0,0,false,0,India,,Visitor
+101,2024-09-06,Service Hub,Professional,0,0,false,0,United States,CA,Visitor
+102,2023-03-25,Marketing Hub,Enterprise,0,0,false,0,United Kingdom,,Visitor
+103,2023-05-28,Ops Hub,Professional,0,0,false,0,Australia,,Visitor
+104,2023-09-26,Marketing Hub,Enterprise,0,0,false,0,United Kingdom,,Visitor
+105,2023-11-02,Service Hub,Starter,0,0,false,0,Canada,,Visitor
+106,2023-08-26,CMS Hub,Professional,0,0,false,0,Australia,,Visitor
+107,2024-09-12,Sales Hub,Enterprise,0,0,false,0,United Kingdom,,Visitor
+108,2024-11-23,Service Hub,Enterprise,0,0,false,0,United States,OH,Visitor
+109,2023-01-18,Service Hub,Professional,0,0,false,0,United Kingdom,,Visitor
+110,2024-01-24,Ops Hub,Enterprise,0,0,false,0,Australia,,Visitor
+111,2023-02-04,Ops Hub,Professional,0,0,false,0,India,,Visitor
+112,2024-01-24,CMS Hub,Starter,0,0,false,0,Germany,,Visitor
+113,2024-11-19,Marketing Hub,Enterprise,0,0,false,0,India,,Visitor
+114,2024-03-29,CMS Hub,Starter,0,0,false,0,United States,VA,Visitor
+115,2023-07-24,CMS Hub,Starter,0,0,false,0,India,,Visitor
+116,2024-07-23,CMS Hub,Professional,0,0,false,0,Germany,,Visitor
+117,2024-03-03,Marketing Hub,Professional,0,0,false,0,Canada,,Visitor
+118,2024-04-12,Sales Hub,Enterprise,0,0,false,0,United Kingdom,,Visitor
+119,2024-08-22,CMS Hub,Starter,0,0,false,0,Australia,,Visitor
+120,2024-02-02,Sales Hub,Enterprise,0,0,false,0,India,,Visitor
+121,2024-04-18,Sales Hub,Professional,0,0,false,0,Germany,,Visitor
+122,2024-11-17,Service Hub,Professional,0,0,false,0,United Kingdom,,Visitor
+123,2024-11-09,Ops Hub,Professional,0,0,false,0,United Kingdom,,Visitor
+124,2023-09-13,Ops Hub,Starter,0,0,false,0,United States,MI,Visitor
+125,2023-08-16,Ops Hub,Professional,0,0,false,0,United States,NJ,Visitor
+126,2023-06-10,Marketing Hub,Professional,0,0,false,0,Canada,,Visitor
+127,2024-01-25,Service Hub,Starter,0,0,false,0,Canada,,Visitor
+128,2024-03-25,Marketing Hub,Starter,0,0,false,0,United Kingdom,,Visitor
+129,2024-03-16,Marketing Hub,Enterprise,0,0,false,0,Germany,,Visitor
+130,2023-06-20,Sales Hub,Starter,0,0,false,0,Canada,,Visitor
+131,2023-09-27,Sales Hub,Starter,0,0,false,0,Australia,,Visitor
+132,2023-09-23,Service Hub,Professional,0,0,false,0,Canada,,Visitor
+133,2023-12-17,CMS Hub,Enterprise,0,0,false,0,United States,CA,Visitor
+134,2023-04-29,Service Hub,Enterprise,0,0,false,0,United Kingdom,,Visitor
+135,2024-03-22,Ops Hub,Professional,0,0,false,0,United States,MA,Visitor
+136,2024-10-24,Service Hub,Enterprise,0,0,false,0,Australia,,Visitor
+137,2024-09-04,CMS Hub,Starter,0,0,false,0,India,,Visitor
+138,2023-08-18,Sales Hub,Enterprise,0,0,false,0,Australia,,Visitor
+139,2024-12-13,Sales Hub,Starter,0,0,false,0,Germany,,Visitor
+140,2023-07-01,Marketing Hub,Starter,0,0,false,0,Australia,,Visitor
+141,2023-02-11,Marketing Hub,Enterprise,0,0,false,0,United States,NY,Visitor
+142,2023-09-06,Sales Hub,Starter,0,0,false,0,Canada,,Visitor
+143,2023-05-19,Ops Hub,Enterprise,0,0,false,0,United Kingdom,,Visitor
+144,2024-05-02,CMS Hub,Professional,0,0,false,0,Australia,,Visitor
+145,2023-01-10,Sales Hub,Enterprise,0,0,false,0,United Kingdom,,Visitor
+146,2023-07-14,Sales Hub,Enterprise,0,0,false,0,Germany,,Visitor
+147,2024-01-22,CMS Hub,Enterprise,0,0,false,0,United Kingdom,,Visitor
+148,2023-06-14,Ops Hub,Starter,0,0,false,0,Australia,,Visitor
+149,2024-04-29,Ops Hub,Starter,0,0,false,0,Germany,,Visitor
+150,2024-02-23,Service Hub,Professional,0,0,false,0,Canada,,Visitor
+151,2024-10-28,Service Hub,Enterprise,0,0,false,0,United Kingdom,,Visitor
+152,2023-10-20,Sales Hub,Starter,0,0,false,0,United States,NC,Visitor
+153,2024-11-30,Sales Hub,Professional,0,0,false,0,India,,Visitor
+154,2024-09-05,Ops Hub,Starter,0,0,false,0,United Kingdom,,Visitor
+155,2024-08-16,Sales Hub,Enterprise,0,0,false,0,Canada,,Visitor
+156,2024-08-21,Ops Hub,Professional,0,0,false,0,Australia,,Visitor
+157,2024-05-07,Marketing Hub,Enterprise,0,0,false,0,United States,NY,Visitor
+158,2024-02-26,Sales Hub,Professional,0,0,false,0,Canada,,Visitor
+159,2023-02-02,CMS Hub,Enterprise,0,0,false,0,India,,Visitor
+160,2024-03-17,Sales Hub,Professional,0,0,false,0,Australia,,Visitor
+161,2023-11-01,Marketing Hub,Enterprise,0,0,false,0,Australia,,Visitor
+162,2023-07-17,Marketing Hub,Enterprise,0,0,false,0,India,,Visitor
+163,2024-08-24,Sales Hub,Enterprise,0,0,false,0,Germany,,Visitor
+164,2023-08-28,Service Hub,Professional,0,0,false,0,United States,FL,Visitor
+165,2023-05-31,Marketing Hub,Professional,0,0,false,0,Australia,,Visitor
+166,2023-10-09,Ops Hub,Enterprise,0,0,false,0,United States,VA,Visitor
+167,2023-12-02,Sales Hub,Enterprise,0,0,false,0,Australia,,Visitor
+168,2023-10-01,Service Hub,Professional,0,0,false,0,India,,Visitor
+169,2024-12-12,Service Hub,Professional,0,0,false,0,Canada,,Visitor
+170,2024-10-28,Marketing Hub,Enterprise,0,0,false,0,United Kingdom,,Visitor
+171,2024-02-07,Marketing Hub,Professional,0,0,false,0,Australia,,Visitor
+172,2024-04-10,Ops Hub,Starter,0,0,false,0,United Kingdom,,Visitor
+173,2023-09-06,Sales Hub,Starter,0,0,false,0,Canada,,Visitor
+174,2024-12-28,Sales Hub,Professional,0,0,false,0,United States,FL,Visitor
+175,2024-07-27,Ops Hub,Starter,0,0,false,0,Canada,,Visitor
+176,2024-05-09,Marketing Hub,Enterprise,0,0,false,0,Australia,,Visitor
+177,2023-07-23,Ops Hub,Enterprise,0,0,false,0,Australia,,Visitor
+178,2023-05-14,Ops Hub,Starter,0,0,false,0,United States,GA,Visitor
+179,2023-05-19,Ops Hub,Enterprise,0,0,false,0,Germany,,Visitor
+180,2023-08-27,Marketing Hub,Starter,0,0,false,0,Germany,,Visitor
+181,2024-06-16,CMS Hub,Enterprise,0,0,false,0,United Kingdom,,Visitor
+182,2023-05-27,Service Hub,Professional,0,0,false,0,Germany,,Visitor
+183,2023-06-03,Sales Hub,Professional,0,0,false,0,Germany,,Visitor
+184,2024-04-16,Ops Hub,Starter,0,0,false,0,Germany,,Visitor
+185,2024-11-19,Service Hub,Enterprise,0,0,false,0,India,,Visitor
+186,2023-02-09,Marketing Hub,Professional,0,0,false,0,Germany,,Visitor
+187,2024-04-12,Marketing Hub,Starter,0,0,false,0,United States,NY,Visitor
+188,2024-09-12,Sales Hub,Professional,0,0,false,0,Canada,,Visitor
+189,2023-04-10,Marketing Hub,Professional,0,0,false,0,United States,OH,Visitor
+190,2024-07-12,Sales Hub,Professional,0,0,false,0,United Kingdom,,Visitor
+191,2023-07-27,Service Hub,Enterprise,0,0,false,0,Germany,,Visitor
+192,2024-04-07,CMS Hub,Professional,0,0,false,0,United Kingdom,,Visitor
+193,2023-01-30,Marketing Hub,Professional,0,0,false,0,Germany,,Visitor
+194,2023-10-27,Service Hub,Professional,0,0,false,0,Canada,,Visitor
+195,2024-04-07,Ops Hub,Professional,0,0,false,0,India,,Visitor
+196,2023-01-02,Sales Hub,Professional,0,0,false,0,India,,Visitor
+197,2023-04-07,Ops Hub,Professional,0,0,false,0,Germany,,Visitor
+198,2024-08-05,Ops Hub,Starter,0,0,false,0,India,,Visitor
+199,2024-10-09,Ops Hub,Enterprise,0,0,false,0,India,,Visitor
+200,2023-04-16,Marketing Hub,Professional,0,0,false,0,United States,TX,Visitor
+201,2023-06-24,CMS Hub,Starter,0,0,false,0,Germany,,Visitor
+202,2024-08-02,Marketing Hub,Enterprise,0,0,false,0,Australia,,Visitor
+203,2024-02-20,Sales Hub,Enterprise,0,0,false,0,United Kingdom,,Visitor
+204,2023-06-25,Sales Hub,Professional,0,0,false,0,India,,Visitor
+205,2024-04-25,Sales Hub,Enterprise,0,0,false,0,Germany,,Visitor
+206,2023-12-23,Service Hub,Starter,0,0,false,0,Germany,,Visitor
+207,2023-09-04,Service Hub,Professional,0,0,false,0,Australia,,Visitor
+208,2024-01-06,Service Hub,Enterprise,0,0,false,0,Germany,,Visitor
+209,2023-05-29,Sales Hub,Enterprise,0,0,false,0,Australia,,Visitor
+210,2023-05-28,Sales Hub,Starter,0,0,false,0,Germany,,Visitor
+211,2024-03-29,Ops Hub,Starter,0,0,false,0,United Kingdom,,Visitor
+212,2024-03-12,Marketing Hub,Enterprise,0,0,false,0,United Kingdom,,Visitor
+213,2024-04-10,CMS Hub,Enterprise,0,0,false,0,Canada,,Visitor
+214,2024-10-18,Sales Hub,Enterprise,0,0,false,0,United States,NJ,Visitor
+215,2024-01-17,Marketing Hub,Professional,0,0,false,0,United Kingdom,,Visitor
+216,2024-07-06,Sales Hub,Enterprise,0,0,false,0,Germany,,Visitor
+217,2023-01-17,Marketing Hub,Enterprise,0,0,false,0,Germany,,Visitor
+218,2024-12-16,CMS Hub,Enterprise,0,0,false,0,Germany,,Visitor
+219,2023-05-25,Marketing Hub,Professional,0,0,false,0,Canada,,Visitor
+220,2023-04-08,Sales Hub,Starter,0,0,false,0,India,,Visitor
+221,2023-09-12,Sales Hub,Starter,0,0,false,0,United Kingdom,,Visitor
+222,2023-04-01,Marketing Hub,Enterprise,0,0,false,0,Canada,,Visitor
+223,2024-03-27,Marketing Hub,Enterprise,0,0,false,0,India,,Visitor
+224,2023-05-26,Sales Hub,Starter,0,0,false,0,United Kingdom,,Visitor
+225,2023-12-26,Service Hub,Professional,0,0,false,0,Australia,,Visitor
+226,2024-05-02,Service Hub,Starter,0,0,false,0,India,,Visitor
+227,2024-06-29,Sales Hub,Enterprise,0,0,false,0,India,,Visitor
+228,2024-08-12,Service Hub,Enterprise,0,0,false,0,United States,NJ,Visitor
+229,2023-03-21,Ops Hub,Starter,0,0,false,0,United Kingdom,,Visitor
+230,2024-06-03,Sales Hub,Professional,0,0,false,0,United States,IL,Visitor
+231,2023-02-27,CMS Hub,Enterprise,0,0,false,0,Australia,,Visitor
+232,2023-08-16,CMS Hub,Enterprise,0,0,false,0,India,,Visitor
+233,2023-09-06,Ops Hub,Enterprise,0,0,false,0,United States,FL,Visitor
+234,2023-04-04,Marketing Hub,Professional,0,0,false,0,United States,NJ,Visitor
+235,2024-09-23,CMS Hub,Professional,0,0,false,0,Canada,,Visitor
+236,2024-02-05,Sales Hub,Professional,0,0,false,0,United States,WA,Visitor
+237,2023-05-02,Ops Hub,Starter,0,0,false,0,Germany,,Visitor
+238,2024-11-10,Marketing Hub,Enterprise,0,0,false,0,Canada,,Visitor
+239,2023-12-21,Ops Hub,Professional,0,0,false,0,Canada,,Visitor
+240,2024-05-11,CMS Hub,Starter,0,0,false,0,Australia,,Visitor
+241,2023-08-29,Service Hub,Enterprise,0,0,false,0,India,,Visitor
+242,2024-04-26,Sales Hub,Professional,0,0,false,0,Australia,,Visitor
+243,2024-09-28,CMS Hub,Starter,0,0,false,0,United Kingdom,,Visitor
+244,2024-06-09,Sales Hub,Professional,0,0,false,0,Canada,,Visitor
+245,2023-11-19,Sales Hub,Starter,0,0,false,0,United Kingdom,,Visitor
+246,2023-01-02,Ops Hub,Professional,0,0,false,0,Australia,,Visitor
+247,2024-05-23,Sales Hub,Professional,0,0,false,0,United Kingdom,,Visitor
+248,2023-10-17,Service Hub,Starter,0,0,false,0,Australia,,Visitor
+249,2023-12-17,Marketing Hub,Starter,0,0,false,0,United States,CA,Visitor
+250,2024-07-26,CMS Hub,Starter,0,0,false,0,United Kingdom,,Visitor
+251,2023-06-21,Sales Hub,Enterprise,0,0,false,0,United Kingdom,,Visitor
+252,2024-10-19,Service Hub,Starter,0,0,false,0,Germany,,Visitor
+253,2024-04-25,CMS Hub,Enterprise,0,0,false,0,United States,TX,Visitor
+254,2024-07-03,Ops Hub,Starter,0,0,false,0,Canada,,Visitor
+255,2023-09-18,Sales Hub,Enterprise,0,0,false,0,United States,WA,Visitor
+256,2023-05-12,Service Hub,Professional,0,0,false,0,United Kingdom,,Visitor
+257,2024-01-16,Marketing Hub,Starter,0,0,false,0,Germany,,Visitor
+258,2024-09-05,Sales Hub,Professional,0,0,false,0,Canada,,Visitor
+259,2024-07-14,Marketing Hub,Starter,0,0,false,0,Australia,,Visitor
+260,2024-10-25,Service Hub,Starter,0,0,false,0,Canada,,Visitor
+261,2024-09-28,CMS Hub,Enterprise,0,0,false,0,United Kingdom,,Visitor
+262,2023-01-12,CMS Hub,Enterprise,0,0,false,0,India,,Visitor
+263,2024-10-06,CMS Hub,Professional,0,0,false,0,United Kingdom,,Visitor
+264,2023-01-04,Service Hub,Starter,0,0,false,0,India,,Visitor
+265,2024-10-10,Sales Hub,Enterprise,0,0,false,0,India,,Visitor
+266,2023-01-30,Ops Hub,Enterprise,0,0,false,0,Australia,,Visitor
+267,2024-12-28,Service Hub,Starter,0,0,false,0,United Kingdom,,Visitor
+268,2023-04-26,Service Hub,Professional,0,0,false,0,United States,NC,Visitor
+269,2023-12-07,Service Hub,Starter,0,0,false,0,Germany,,Visitor
+270,2023-07-21,Sales Hub,Starter,0,0,false,0,Australia,,Visitor
+271,2024-09-08,Marketing Hub,Professional,0,0,false,0,Germany,,Visitor
+272,2023-04-29,Ops Hub,Starter,0,0,false,0,India,,Visitor
+273,2023-04-05,Service Hub,Enterprise,0,0,false,0,United Kingdom,,Visitor
+274,2024-07-12,Service Hub,Enterprise,0,0,false,0,Canada,,Visitor
+275,2023-11-22,Marketing Hub,Enterprise,0,0,false,0,India,,Visitor
+276,2024-07-04,Ops Hub,Starter,0,0,false,0,Australia,,Visitor
+277,2024-10-14,CMS Hub,Professional,0,0,false,0,United States,MA,Visitor
+278,2024-03-06,Sales Hub,Starter,0,0,false,0,United Kingdom,,Visitor
+279,2024-04-05,CMS Hub,Starter,0,0,false,0,Canada,,Visitor
+280,2023-07-16,CMS Hub,Starter,0,0,false,0,Germany,,Visitor
+281,2024-04-26,CMS Hub,Professional,0,0,false,0,Canada,,Visitor
+282,2023-03-01,Ops Hub,Starter,0,0,false,0,Germany,,Visitor
+283,2023-01-03,Marketing Hub,Starter,0,0,false,0,Germany,,Visitor
+284,2023-07-20,CMS Hub,Starter,0,0,false,0,United Kingdom,,Visitor
+285,2024-11-02,Sales Hub,Professional,0,0,false,0,Canada,,Visitor
+286,2024-11-14,Marketing Hub,Starter,0,0,false,0,Germany,,Visitor
+287,2024-03-20,Ops Hub,Starter,0,0,false,0,United States,GA,Visitor
+288,2024-10-15,Sales Hub,Starter,0,0,false,0,India,,Visitor
+289,2023-01-22,Sales Hub,Starter,0,0,false,0,Canada,,Visitor
+290,2024-01-07,Marketing Hub,Professional,0,0,false,0,United Kingdom,,Visitor
+291,2024-06-26,CMS Hub,Starter,0,0,false,0,United States,CA,Visitor
+292,2023-08-22,Sales Hub,Starter,0,0,false,0,Australia,,Visitor
+293,2023-09-06,Ops Hub,Starter,0,0,false,0,United Kingdom,,Visitor
+294,2024-03-21,Service Hub,Starter,0,0,false,0,United Kingdom,,Visitor
+295,2023-02-19,Sales Hub,Professional,0,0,false,0,United Kingdom,,Visitor
+296,2023-01-14,Ops Hub,Professional,0,0,false,0,Germany,,Visitor
+297,2023-03-08,Ops Hub,Enterprise,0,0,false,0,Canada,,Visitor
+298,2024-02-21,Ops Hub,Enterprise,0,0,false,0,Australia,,Visitor
+299,2024-03-07,Marketing Hub,Enterprise,0,0,false,0,Canada,,Visitor
+300,2023-04-12,Marketing Hub,Starter,0,0,false,0,Canada,,Visitor
+301,2024-07-07,Marketing Hub,Professional,0,0,false,0,Germany,,Visitor
+302,2023-01-02,Sales Hub,Starter,0,0,false,0,Germany,,Visitor
+303,2024-06-11,CMS Hub,Professional,0,0,false,0,United States,NC,Visitor
+304,2024-06-01,Marketing Hub,Starter,0,0,false,0,United Kingdom,,Visitor
+305,2023-11-27,CMS Hub,Starter,0,0,false,0,India,,Visitor
+306,2024-05-11,CMS Hub,Starter,0,0,false,0,Germany,,Visitor
+307,2023-10-15,Marketing Hub,Enterprise,0,0,false,0,Germany,,Visitor
+308,2024-10-11,Sales Hub,Professional,0,0,false,0,Australia,,Visitor
+309,2024-08-20,Ops Hub,Starter,0,0,false,0,India,,Visitor
+310,2023-03-25,CMS Hub,Starter,0,0,false,0,Australia,,Visitor
+311,2024-12-25,Sales Hub,Enterprise,0,0,false,0,Australia,,Visitor
+312,2024-11-06,Ops Hub,Starter,0,0,false,0,United States,NC,Visitor
+313,2024-10-25,Service Hub,Starter,0,0,false,0,United States,OH,Visitor
+314,2023-12-02,Sales Hub,Professional,0,0,false,0,United States,OH,Visitor
+315,2023-06-09,Ops Hub,Professional,0,0,false,0,India,,Visitor
+316,2024-12-28,Service Hub,Starter,0,0,false,0,United States,MA,Visitor
+317,2024-07-08,Ops Hub,Enterprise,0,0,false,0,United States,WA,Visitor
+318,2023-05-14,CMS Hub,Enterprise,0,0,false,0,India,,Visitor
+319,2024-05-26,Ops Hub,Starter,0,0,false,0,Canada,,Visitor
+320,2023-07-23,Ops Hub,Starter,0,0,false,0,United States,CA,Visitor
+321,2023-11-17,CMS Hub,Starter,0,0,false,0,United States,NY,Visitor
+322,2024-11-05,Service Hub,Professional,0,0,false,0,Australia,,Visitor
+323,2023-07-20,CMS Hub,Enterprise,0,0,false,0,Australia,,Visitor
+324,2023-04-29,Ops Hub,Enterprise,0,0,false,0,India,,Visitor
+325,2024-10-28,Service Hub,Professional,0,0,false,0,Australia,,Visitor
+326,2023-02-04,Ops Hub,Professional,0,0,false,0,United States,NJ,Visitor
+327,2023-04-06,Service Hub,Starter,0,0,false,0,India,,Visitor
+328,2024-01-17,CMS Hub,Enterprise,0,0,false,0,Canada,,Visitor
+329,2024-09-19,Ops Hub,Professional,0,0,false,0,Canada,,Visitor
+330,2024-03-26,Ops Hub,Enterprise,0,0,false,0,United Kingdom,,Visitor
+331,2023-02-06,CMS Hub,Professional,0,0,false,0,United Kingdom,,Visitor
+332,2024-02-16,Service Hub,Starter,0,0,false,0,United States,MA,Visitor
+333,2024-08-31,Marketing Hub,Enterprise,0,0,false,0,United Kingdom,,Visitor
+334,2023-11-08,Marketing Hub,Professional,0,0,false,0,United States,NC,Visitor
+335,2024-01-17,Marketing Hub,Enterprise,0,0,false,0,United Kingdom,,Visitor
+336,2023-03-28,CMS Hub,Enterprise,0,0,false,0,Canada,,Visitor
+337,2024-01-09,Service Hub,Professional,0,0,false,0,United States,IL,Visitor
+338,2024-01-04,Marketing Hub,Professional,0,0,false,0,India,,Visitor
+339,2023-08-13,CMS Hub,Enterprise,0,0,false,0,United States,TX,Visitor
+340,2023-10-08,Marketing Hub,Enterprise,0,0,false,0,India,,Visitor
+341,2023-09-05,Sales Hub,Enterprise,0,0,false,0,Germany,,Visitor
+342,2023-01-06,Service Hub,Enterprise,0,0,false,0,Germany,,Visitor
+343,2024-05-25,Ops Hub,Professional,0,0,false,0,Canada,,Visitor
+344,2023-08-04,Sales Hub,Enterprise,0,0,false,0,Australia,,Visitor
+345,2023-12-15,Sales Hub,Starter,0,0,false,0,United Kingdom,,Visitor
+346,2024-05-02,Service Hub,Starter,0,0,false,0,India,,Visitor
+347,2024-12-26,Sales Hub,Professional,0,0,false,0,United States,CA,Visitor
+348,2024-08-04,CMS Hub,Professional,0,0,false,0,Canada,,Visitor
+349,2023-06-25,CMS Hub,Starter,0,0,false,0,United Kingdom,,Visitor
+350,2024-04-13,Service Hub,Professional,0,0,false,0,India,,Visitor
+351,2023-02-17,Marketing Hub,Professional,0,0,false,0,United Kingdom,,Visitor
+352,2024-04-03,Service Hub,Professional,0,0,false,0,United States,WA,Visitor
+353,2023-12-15,Sales Hub,Starter,0,0,false,0,Germany,,Visitor
+354,2023-11-19,Ops Hub,Professional,0,0,false,0,Canada,,Visitor
+355,2023-06-19,Ops Hub,Professional,0,0,false,0,Germany,,Visitor
+356,2024-12-18,Sales Hub,Enterprise,0,0,false,0,India,,Visitor
+357,2023-05-09,CMS Hub,Professional,0,0,false,0,United Kingdom,,Visitor
+358,2023-10-25,CMS Hub,Starter,0,0,false,0,India,,Visitor
+359,2024-11-09,Marketing Hub,Starter,0,0,false,0,Canada,,Visitor
+360,2023-12-02,Ops Hub,Professional,0,0,false,0,United States,OH,Visitor
+361,2023-06-26,Sales Hub,Starter,0,0,false,0,United Kingdom,,Visitor
+362,2024-07-21,CMS Hub,Enterprise,0,0,false,0,Germany,,Visitor
+363,2023-04-08,Sales Hub,Starter,0,0,false,0,Australia,,Visitor
+364,2024-05-21,Marketing Hub,Enterprise,0,0,false,0,India,,Visitor
+365,2024-12-29,Service Hub,Starter,0,0,false,0,Canada,,Visitor
+366,2024-07-26,Ops Hub,Professional,0,0,false,0,Germany,,Visitor
+367,2023-06-19,Marketing Hub,Starter,0,0,false,0,India,,Visitor
+368,2024-03-24,Sales Hub,Professional,0,0,false,0,India,,Visitor
+369,2023-11-18,Sales Hub,Professional,0,0,false,0,United States,VA,Visitor
+370,2024-06-20,Ops Hub,Starter,0,0,false,0,Germany,,Visitor
+371,2023-04-16,CMS Hub,Starter,0,0,false,0,Canada,,Visitor
+372,2023-05-14,Service Hub,Starter,0,0,false,0,Germany,,Visitor
+373,2024-10-10,Ops Hub,Starter,0,0,false,0,Germany,,Visitor
+374,2024-11-07,Marketing Hub,Starter,0,0,false,0,India,,Visitor
+375,2023-08-06,Sales Hub,Starter,0,0,false,0,United Kingdom,,Visitor
+376,2023-07-19,Ops Hub,Enterprise,0,0,false,0,United Kingdom,,Visitor
+377,2024-12-07,Service Hub,Professional,0,0,false,0,India,,Visitor
+378,2024-08-24,Marketing Hub,Professional,0,0,false,0,Canada,,Visitor
+379,2023-07-21,Ops Hub,Starter,0,0,false,0,United States,TX,Visitor
+380,2024-03-03,Marketing Hub,Professional,0,0,false,0,Germany,,Visitor
+381,2024-10-27,Service Hub,Starter,0,0,false,0,United Kingdom,,Visitor
+382,2024-07-25,Marketing Hub,Professional,0,0,false,0,United States,IL,Visitor
+383,2023-08-11,Ops Hub,Enterprise,0,0,false,0,Canada,,Visitor
+384,2024-04-07,Service Hub,Enterprise,0,0,false,0,United Kingdom,,Visitor
+385,2023-11-08,CMS Hub,Enterprise,0,0,false,0,Canada,,Visitor
+386,2023-12-02,Sales Hub,Starter,0,0,false,0,Canada,,Visitor
+387,2023-03-14,Ops Hub,Enterprise,0,0,false,0,Australia,,Visitor
+388,2024-11-01,Sales Hub,Professional,0,0,false,0,India,,Visitor
+389,2024-09-20,CMS Hub,Professional,0,0,false,0,Germany,,Visitor
+390,2024-12-28,CMS Hub,Starter,0,0,false,0,United Kingdom,,Visitor
+391,2024-11-20,Marketing Hub,Enterprise,0,0,false,0,United States,OH,Visitor
+392,2023-05-12,Sales Hub,Starter,0,0,false,0,Germany,,Visitor
+393,2023-12-11,Marketing Hub,Starter,0,0,false,0,United Kingdom,,Visitor
+394,2024-04-21,CMS Hub,Enterprise,0,0,false,0,Canada,,Visitor
+395,2023-04-10,Ops Hub,Enterprise,0,0,false,0,Germany,,Visitor
+396,2024-04-24,Marketing Hub,Enterprise,0,0,false,0,United States,NJ,Visitor
+397,2023-09-17,CMS Hub,Enterprise,0,0,false,0,India,,Visitor
+398,2023-09-07,Service Hub,Professional,0,0,false,0,Canada,,Visitor
+399,2024-02-27,Service Hub,Enterprise,0,0,false,0,United Kingdom,,Visitor
+400,2023-10-20,Marketing Hub,Professional,0,0,false,0,Canada,,Visitor
+401,2023-09-06,Marketing Hub,Professional,0,0,false,0,Canada,,Signup
+402,2023-10-22,CMS Hub,Enterprise,0,0,false,0,Germany,,Signup
+403,2024-06-21,Sales Hub,Starter,0,0,false,0,India,,Signup
+404,2024-04-03,CMS Hub,Enterprise,0,0,true,0,Canada,,Signup
+405,2024-01-24,Service Hub,Professional,0,0,true,0,United States,VA,Signup
+406,2023-11-07,Service Hub,Starter,0,0,false,0,Germany,,Signup
+407,2024-06-29,Marketing Hub,Enterprise,0,0,false,0,Germany,,Signup
+408,2024-06-14,Ops Hub,Professional,0,0,false,0,United States,WA,Signup
+409,2024-01-10,Service Hub,Enterprise,0,0,false,0,United Kingdom,,Signup
+410,2024-01-13,Ops Hub,Enterprise,0,0,false,0,United Kingdom,,Signup
+411,2023-01-30,Ops Hub,Professional,0,0,false,0,United States,FL,Signup
+412,2024-07-24,Ops Hub,Professional,0,0,false,0,India,,Signup
+413,2024-04-06,CMS Hub,Enterprise,0,0,false,0,Germany,,Signup
+414,2023-06-24,CMS Hub,Professional,0,0,false,0,Australia,,Signup
+415,2024-12-04,Sales Hub,Professional,0,0,false,0,United States,NY,Signup
+416,2023-09-10,Sales Hub,Professional,0,0,false,0,United States,MI,Signup
+417,2024-04-16,Sales Hub,Professional,0,0,false,0,United Kingdom,,Signup
+418,2024-01-20,Sales Hub,Enterprise,0,0,false,0,Germany,,Signup
+419,2023-03-24,Service Hub,Starter,0,0,false,0,Australia,,Signup
+420,2023-04-22,Ops Hub,Professional,0,0,true,0,Australia,,Signup
+421,2024-02-10,Service Hub,Starter,0,0,false,0,United Kingdom,,Signup
+422,2023-02-08,Service Hub,Professional,0,0,false,0,Canada,,Signup
+423,2023-05-12,CMS Hub,Professional,0,0,true,0,Canada,,Signup
+424,2023-11-20,Marketing Hub,Enterprise,0,0,false,0,India,,Signup
+425,2024-09-05,Ops Hub,Starter,0,0,false,0,Australia,,Signup
+426,2023-11-21,Service Hub,Enterprise,0,0,false,0,Germany,,Signup
+427,2023-02-10,CMS Hub,Starter,0,0,false,0,United Kingdom,,Signup
+428,2023-08-25,Marketing Hub,Enterprise,0,0,false,0,India,,Signup
+429,2023-01-13,Sales Hub,Professional,0,0,false,0,Australia,,Signup
+430,2024-03-23,Service Hub,Enterprise,0,0,false,0,India,,Signup
+431,2024-01-11,Service Hub,Professional,0,0,false,0,Germany,,Signup
+432,2024-10-31,Service Hub,Starter,0,0,false,0,Canada,,Signup
+433,2024-10-17,Service Hub,Professional,0,0,false,0,Germany,,Signup
+434,2023-11-26,Service Hub,Professional,0,0,false,0,India,,Signup
+435,2024-08-04,Service Hub,Professional,0,0,false,0,India,,Signup
+436,2024-06-01,Marketing Hub,Professional,0,0,false,0,India,,Signup
+437,2023-05-28,Sales Hub,Starter,0,0,false,0,United States,NJ,Signup
+438,2024-05-26,Ops Hub,Professional,0,0,false,0,United Kingdom,,Signup
+439,2024-03-28,CMS Hub,Starter,0,0,false,0,Canada,,Signup
+440,2023-01-18,Sales Hub,Starter,0,0,true,0,United Kingdom,,Signup
+441,2024-11-05,CMS Hub,Professional,0,0,false,0,United States,OH,Signup
+442,2024-12-18,Service Hub,Professional,0,0,false,0,Australia,,Signup
+443,2023-06-27,Service Hub,Enterprise,0,0,false,0,Australia,,Signup
+444,2024-10-31,CMS Hub,Enterprise,0,0,false,0,Canada,,Signup
+445,2024-11-08,Ops Hub,Starter,0,0,false,0,United States,MA,Signup
+446,2024-11-30,Service Hub,Enterprise,0,0,false,0,India,,Signup
+447,2024-07-19,Service Hub,Starter,0,0,false,0,Germany,,Signup
+448,2024-02-07,Ops Hub,Enterprise,0,0,false,0,United Kingdom,,Signup
+449,2023-09-16,Sales Hub,Enterprise,0,0,false,0,India,,Signup
+450,2024-09-17,Ops Hub,Starter,0,0,false,0,India,,Signup
+451,2023-09-02,Ops Hub,Professional,0,0,false,0,Germany,,Signup
+452,2023-01-18,Marketing Hub,Enterprise,0,0,false,0,Germany,,Signup
+453,2023-01-28,Marketing Hub,Professional,0,0,false,0,United States,OH,Signup
+454,2023-09-28,Ops Hub,Professional,0,0,false,0,United States,OH,Signup
+455,2023-07-17,Ops Hub,Starter,0,0,false,0,Australia,,Signup
+456,2024-11-03,Sales Hub,Starter,0,0,false,0,Canada,,Signup
+457,2024-07-01,Ops Hub,Enterprise,0,0,false,0,Canada,,Signup
+458,2024-12-20,Sales Hub,Professional,0,0,true,0,Germany,,Signup
+459,2023-02-15,CMS Hub,Starter,0,0,false,0,India,,Signup
+460,2023-12-11,Marketing Hub,Professional,0,0,false,0,Germany,,Signup
+461,2024-04-15,Service Hub,Starter,0,0,false,0,Australia,,Signup
+462,2023-10-27,Service Hub,Professional,0,0,true,0,United States,VA,Signup
+463,2024-06-01,CMS Hub,Professional,0,0,false,0,Canada,,Signup
+464,2023-07-03,Sales Hub,Starter,0,0,false,0,Australia,,Signup
+465,2024-03-12,CMS Hub,Professional,0,0,false,0,Australia,,Signup
+466,2023-04-06,Marketing Hub,Starter,0,0,false,0,United Kingdom,,Signup
+467,2024-01-01,Sales Hub,Professional,0,0,false,0,United Kingdom,,Signup
+468,2023-04-21,Ops Hub,Enterprise,0,0,false,0,Australia,,Signup
+469,2024-06-07,Service Hub,Professional,0,0,false,0,United Kingdom,,Signup
+470,2023-04-21,CMS Hub,Starter,0,0,false,0,India,,Signup
+471,2024-03-21,Marketing Hub,Professional,0,0,false,0,India,,Signup
+472,2024-01-04,Service Hub,Professional,0,0,false,0,United Kingdom,,Signup
+473,2023-12-15,Sales Hub,Enterprise,0,0,false,0,Canada,,Signup
+474,2024-09-05,Marketing Hub,Professional,0,0,false,0,Canada,,Signup
+475,2023-10-19,Sales Hub,Enterprise,0,0,true,0,Canada,,Signup
+476,2023-06-28,Service Hub,Enterprise,0,0,false,0,United Kingdom,,Signup
+477,2023-08-04,Service Hub,Professional,0,0,true,0,Germany,,Signup
+478,2023-12-05,Marketing Hub,Enterprise,0,0,false,0,United Kingdom,,Signup
+479,2023-01-08,Ops Hub,Enterprise,0,0,false,0,India,,Signup
+480,2024-11-04,Marketing Hub,Enterprise,0,0,false,0,Canada,,Signup
+481,2023-10-19,Service Hub,Enterprise,0,0,false,0,Germany,,Signup
+482,2024-10-14,Sales Hub,Enterprise,0,0,true,0,United States,MA,Signup
+483,2023-01-10,Marketing Hub,Professional,0,0,true,0,Australia,,Signup
+484,2023-06-05,CMS Hub,Starter,0,0,false,0,United States,WA,Signup
+485,2023-07-05,Marketing Hub,Starter,0,0,false,0,India,,Signup
+486,2023-09-04,CMS Hub,Enterprise,0,0,false,0,Australia,,Signup
+487,2024-03-20,Service Hub,Professional,0,0,false,0,United States,NJ,Signup
+488,2023-08-05,Sales Hub,Starter,0,0,false,0,United Kingdom,,Signup
+489,2023-02-22,Ops Hub,Starter,0,0,false,0,Germany,,Signup
+490,2023-10-29,Service Hub,Professional,0,0,false,0,Germany,,Signup
+491,2023-10-26,CMS Hub,Starter,0,0,false,0,Canada,,Signup
+492,2023-07-28,CMS Hub,Enterprise,0,0,false,0,Germany,,Signup
+493,2024-12-13,Marketing Hub,Professional,0,0,false,0,Canada,,Signup
+494,2024-04-19,CMS Hub,Professional,0,0,false,0,Canada,,Signup
+495,2023-03-11,CMS Hub,Enterprise,0,0,false,0,Canada,,Signup
+496,2023-09-20,Marketing Hub,Enterprise,0,0,false,0,India,,Signup
+497,2023-06-03,Sales Hub,Starter,0,0,false,0,Canada,,Signup
+498,2024-04-01,Marketing Hub,Starter,0,0,false,0,Canada,,Signup
+499,2023-10-01,Marketing Hub,Professional,0,0,false,0,Australia,,

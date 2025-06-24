@@ -1,0 +1,488 @@
+version: 2
+
+sources:
+  - name: raw
+    description: "Raw data from various source systems"
+    tables:
+      - name: customers
+        description: "Customer master data"
+        columns:
+          - name: customer_id
+            description: "Unique customer identifier"
+            tests:
+              - unique
+              - not_null
+          - name: email
+            description: "Customer email address"
+            tests:
+              - not_null
+          - name: signup_date
+            description: "Date when customer first signed up"
+            tests:
+              - not_null
+          - name: company_size
+            description: "Size category of customer company"
+            tests:
+              - accepted_values:
+                  values: ['startup', 'small', 'medium', 'large', 'enterprise']
+          - name: industry
+            description: "Industry sector of customer"
+          - name: country
+            description: "Customer country"
+          - name: state
+            description: "Customer state (for US customers)"
+
+      - name: subscriptions
+        description: "Customer subscription data"
+        columns:
+          - name: subscription_id
+            description: "Unique subscription identifier"
+            tests:
+              - unique
+              - not_null
+          - name: customer_id
+            description: "Reference to customer"
+            tests:
+              - not_null
+              - relationships:
+                  to: source('raw', 'customers')
+                  field: customer_id
+          - name: monthly_revenue
+            description: "Monthly recurring revenue from subscription"
+            tests:
+              - not_null
+              - dbt_expectations.expect_column_values_to_be_between:
+                  min_value: 0
+                  max_value: 10000
+          - name: subscription_start_date
+            description: "Subscription start date"
+            tests:
+              - not_null
+          - name: subscription_end_date
+            description: "Subscription end date (null if active)"
+          - name: is_active
+            description: "Whether subscription is currently active"
+            tests:
+              - not_null
+
+      - name: usage_events
+        description: "Product usage events"
+        columns:
+          - name: event_id
+            description: "Unique event identifier"
+            tests:
+              - unique
+              - not_null
+          - name: customer_id
+            description: "Reference to customer"
+            tests:
+              - not_null
+          - name: session_duration_minutes
+            description: "Duration of usage session"
+            tests:
+              - dbt_expectations.expect_column_values_to_be_between:
+                  min_value: 0
+                  max_value: 1440  # 24 hours max
+          - name: event_date
+            description: "Date of usage event"
+            tests:
+              - not_null
+
+      - name: support_interactions
+        description: "Customer support interaction data"
+        columns:
+          - name: interaction_id
+            description: "Unique interaction identifier"
+            tests:
+              - unique
+              - not_null
+          - name: customer_id
+            description: "Reference to customer"
+            tests:
+              - not_null
+          - name: satisfaction_score
+            description: "Customer satisfaction rating (1-5)"
+            tests:
+              - dbt_expectations.expect_column_values_to_be_between:
+                  min_value: 1
+                  max_value: 5
+
+models:
+  - name: stg_customers
+    description: "Cleaned and standardized customer data"
+    columns:
+      - name: customer_id
+        description: "Unique customer identifier"
+        tests:
+          - unique
+          - not_null
+      - name: industry
+        description: "Standardized industry classification"
+      - name: company_size
+        description: "Standardized company size category"
+      - name: country
+        description: "Standardized country name"
+      - name: is_missing_email
+        description: "Flag indicating missing email address"
+      - name: is_missing_country
+        description: "Flag indicating missing country data"
+
+  - name: stg_subscriptions
+    description: "Cleaned and standardized subscription data"
+    columns:
+      - name: subscription_id
+        description: "Unique subscription identifier"
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: "Reference to customer"
+        tests:
+          - not_null
+      - name: hub
+        description: "Product hub (cms, crm, analytics, marketing, sales)"
+        tests:
+          - accepted_values:
+              values: ['cms', 'crm', 'analytics', 'marketing', 'sales']
+      - name: tier
+        description: "Subscription tier (starter, professional, enterprise)"
+        tests:
+          - accepted_values:
+              values: ['starter', 'professional', 'enterprise']
+      - name: monthly_revenue
+        description: "Monthly recurring revenue"
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 10000
+      - name: has_invalid_revenue
+        description: "Flag for invalid revenue values"
+      - name: has_invalid_dates
+        description: "Flag for invalid date ranges"
+
+  - name: stg_usage_events
+    description: "Cleaned and standardized usage event data"
+    columns:
+      - name: event_id
+        description: "Unique event identifier"
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: "Reference to customer"
+        tests:
+          - not_null
+      - name: engagement_level
+        description: "Calculated engagement level (HIGH, MEDIUM, LOW, MINIMAL)"
+        tests:
+          - accepted_values:
+              values: ['HIGH', 'MEDIUM', 'LOW', 'MINIMAL']
+      - name: pages_per_minute
+        description: "Pages viewed per minute of session"
+      - name: api_calls_per_minute
+        description: "API calls per minute of session"
+
+  - name: stg_support_interactions
+    description: "Cleaned and standardized support interaction data"
+    columns:
+      - name: interaction_id
+        description: "Unique interaction identifier"
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: "Reference to customer"
+        tests:
+          - not_null
+      - name: resolution_speed
+        description: "Categorized resolution speed"
+        tests:
+          - accepted_values:
+              values: ['FAST', 'NORMAL', 'SLOW', 'VERY_SLOW']
+      - name: satisfaction_category
+        description: "Categorized satisfaction level"
+        tests:
+          - accepted_values:
+              values: ['SATISFIED', 'NEUTRAL', 'DISSATISFIED']
+
+  - name: int_customer_metrics
+    description: "Comprehensive customer metrics aggregation"
+    tests:
+      - dbt_expectations.expect_table_row_count_to_be_between:
+          min_value: 100
+          max_value: 100000
+    columns:
+      - name: customer_id
+        description: "Unique customer identifier"
+        tests:
+          - unique
+          - not_null
+      - name: customer_health_score
+        description: "Calculated customer health score (0-100)"
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 100
+      - name: current_mrr
+        description: "Current monthly recurring revenue"
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 50000
+      - name: days_since_last_activity
+        description: "Days since last recorded activity"
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 9999
+
+  - name: int_subscription_cohorts
+    description: "Subscription cohort analysis with retention metrics"
+    columns:
+      - name: cohort_month
+        description: "Month when cohort first subscribed"
+        tests:
+          - not_null
+      - name: cohort_size
+        description: "Number of customers in cohort"
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 1
+              max_value: 10000
+      - name: retention_rate_month_1
+        description: "1-month retention rate"
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 1
+      - name: retention_rate_month_12
+        description: "12-month retention rate"
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 1
+
+  - name: int_pricing_elasticity
+    description: "Pricing elasticity analysis with demand curves"
+    columns:
+      - name: hub
+        description: "Product hub"
+        tests:
+          - not_null
+      - name: tier
+        description: "Subscription tier"
+        tests:
+          - not_null
+      - name: price_point
+        description: "Price point for elasticity analysis"
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 1
+              max_value: 1000
+      - name: adoption_rate
+        description: "Projected adoption rate at price point"
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 100
+      - name: elasticity_classification
+        description: "Price elasticity classification"
+        tests:
+          - accepted_values:
+              values: ['ELASTIC', 'INELASTIC', 'UNIT_ELASTIC', 'UNDEFINED']
+
+  - name: dim_customers
+    description: "Customer dimension table with segmentation and risk scoring"
+    tests:
+      - dbt_expectations.expect_table_row_count_to_be_between:
+          min_value: 100
+          max_value: 100000
+    columns:
+      - name: customer_id
+        description: "Unique customer identifier - Primary Key"
+        tests:
+          - unique
+          - not_null
+      - name: customer_segment
+        description: "Customer segmentation classification"
+        tests:
+          - accepted_values:
+              values: ['CHAMPION', 'LOYAL', 'POTENTIAL_LOYAL', 'NEW_CUSTOMER', 
+                      'PROMISING', 'AT_RISK', 'CANNOT_LOSE', 'HIBERNATING', 'LOST']
+      - name: churn_risk
+        description: "Churn risk assessment"
+        tests:
+          - accepted_values:
+              values: ['HIGH', 'MEDIUM', 'LOW']
+      - name: estimated_ltv
+        description: "Estimated customer lifetime value"
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 1000000
+
+  - name: dim_products
+    description: "Product dimension table with hierarchy and metrics"
+    columns:
+      - name: product_key
+        description: "Surrogate key for hub-tier combination"
+        tests:
+          - unique
+          - not_null
+      - name: hub
+        description: "Product hub"
+        tests:
+          - not_null
+      - name: tier
+        description: "Subscription tier"
+        tests:
+          - not_null
+      - name: product_category
+        description: "Product category classification"
+        tests:
+          - accepted_values:
+              values: ['GROWTH', 'REVENUE', 'INTELLIGENCE', 'OTHER']
+      - name: tier_rank
+        description: "Numeric rank of tier"
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 3
+
+  - name: fact_subscription_metrics
+    description: "Daily subscription and revenue metrics fact table"
+    tests:
+      - dbt_expectations.expect_table_row_count_to_be_between:
+          min_value: 1000
+          max_value: 1000000
+    columns:
+      - name: fact_key
+        description: "Surrogate key for fact record"
+        tests:
+          - unique
+          - not_null
+      - name: metric_date
+        description: "Date of metrics"
+        tests:
+          - not_null
+      - name: product_key
+        description: "Reference to product dimension"
+        tests:
+          - not_null
+      - name: total_mrr
+        description: "Total monthly recurring revenue"
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 10000000
+      - name: daily_churn_rate_pct
+        description: "Daily churn rate percentage"
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 100
+      - name: arpu
+        description: "Average revenue per user"
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 10000
+
+  - name: fact_customer_ltv
+    description: "Customer lifetime value analysis fact table"
+    columns:
+      - name: customer_id
+        description: "Customer identifier - Primary Key"
+        tests:
+          - unique
+          - not_null
+      - name: predicted_ltv
+        description: "Predicted lifetime value"
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 1000000
+      - name: ltv_segment
+        description: "LTV-based customer segmentation"
+        tests:
+          - accepted_values:
+              values: ['VERY_HIGH', 'HIGH', 'MEDIUM', 'LOW', 'VERY_LOW']
+      - name: customer_roi_pct
+        description: "Customer return on investment percentage"
+      - name: payback_period_months
+        description: "Customer acquisition payback period in months"
+
+  - name: fact_pricing_optimization
+    description: "Pricing optimization scenarios and recommendations"
+    columns:
+      - name: pricing_scenario_key
+        description: "Unique key for pricing scenario"
+        tests:
+          - unique
+          - not_null
+      - name: hub
+        description: "Product hub"
+        tests:
+          - not_null
+      - name: tier
+        description: "Subscription tier"
+        tests:
+          - not_null
+      - name: strategic_recommendation
+        description: "Strategic pricing recommendation"
+        tests:
+          - accepted_values:
+              values: ['IMPLEMENT_IMMEDIATELY', 'TEST_RECOMMENDED', 'CAREFUL_TESTING', 'AVOID', 'MONITOR']
+      - name: implementation_priority
+        description: "Implementation timeline priority"
+        tests:
+          - accepted_values:
+              values: ['Q1', 'Q2', 'Q3', 'Q4_OR_LATER']
+      - name: pricing_risk_level
+        description: "Risk level of pricing change"
+        tests:
+          - accepted_values:
+              values: ['LOW_RISK', 'MEDIUM_RISK', 'HIGH_RISK', 'UNKNOWN_RISK']
+
+  - name: mart_executive_summary
+    description: "Executive-level KPIs and insights"
+    tests:
+      - dbt_expectations.expect_table_row_count_to_equal:
+          value: 1  # Should always be exactly one summary record
+    columns:
+      - name: current_month_avg_mrr
+        description: "Current month average MRR"
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 100000000
+      - name: mrr_growth_mom_pct
+        description: "Month-over-month MRR growth percentage"
+      - name: total_high_risk_customers
+        description: "Total number of high-risk customers"
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 100000
+
+  - name: data_quality_metrics
+    description: "Data quality monitoring and metrics"
+    columns:
+      - name: table_name
+        description: "Name of table or check being monitored"
+        tests:
+          - not_null
+      - name: data_quality_score
+        description: "Data quality score (0-100)"
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 100
+      - name: uniqueness_check
+        description: "Result of uniqueness validation"
+        tests:
+          - accepted_values:
+              values: ['PASS', 'FAIL']

@@ -1,0 +1,168 @@
+name: 'hub_monetization_analytics'
+version: '1.0.0'
+config-version: 2
+
+# This setting configures which "profile" dbt uses for this project.
+profile: 'hub_monetization'
+
+# These configurations specify where dbt should look for different types of files.
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+# Model configurations
+models:
+  hub_monetization_analytics:
+    # Staging models - Views for performance and development flexibility
+    staging:
+      +materialized: view
+      +docs:
+        node_color: "#E8F4F8"
+    
+    # Intermediate models - Tables for complex transformations
+    intermediate:
+      +materialized: table
+      +docs:
+        node_color: "#F0F8E8"
+    
+    # Marts - Production-ready tables with optimizations
+    marts:
+      +materialized: table
+      +post-hook: "{{ optimize_table() }}"
+      +docs:
+        node_color: "#F8F0E8"
+      
+      # Fact tables with partitioning for performance
+      fact_customer_ltv:
+        +materialized: table
+        +partition_by: 
+          field: "created_at"
+          data_type: "timestamp"
+        +cluster_by: ["customer_id", "industry"]
+        
+      fact_subscription_metrics:
+        +materialized: table
+        +partition_by:
+          field: "metric_date"
+          data_type: "date"
+        +cluster_by: ["hub", "tier"]
+        
+      fact_pricing_optimization:
+        +materialized: table
+        +cluster_by: ["hub", "tier", "strategic_recommendation"]
+
+# Test configurations
+tests:
+  +store_failures: true
+  +severity: error
+
+# Snapshot configurations
+# dbt_project.yml
+name: 'hub_monetization_analytics'
+version: '1.0.0'
+config-version: 2
+
+# This setting configures which "profile" dbt uses for this project.
+profile: 'hub_monetization'
+
+# These configurations specify where dbt should look for different types of files.
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+# Model configurations
+models:
+  hub_monetization_analytics:
+    # Staging models - Views for performance and development flexibility
+    staging:
+      +materialized: view
+      +docs:
+        node_color: "#E8F4F8"
+    
+    # Intermediate models - Tables for complex transformations
+    intermediate:
+      +materialized: table
+      +docs:
+        node_color: "#F0F8E8"
+    
+    # Marts - Production-ready tables with optimizations
+    marts:
+      +materialized: table
+      +post-hook: "{{ optimize_table() }}"
+      +docs:
+        node_color: "#F8F0E8"
+      
+      # Fact tables with partitioning for performance
+      fact_customer_ltv:
+        +materialized: table
+        +partition_by: 
+          field: "created_at"
+          data_type: "timestamp"
+        +cluster_by: ["customer_id", "industry"]
+        
+      fact_subscription_metrics:
+        +materialized: table
+        +partition_by:
+          field: "metric_date"
+          data_type: "date"
+        +cluster_by: ["hub", "tier"]
+        
+      fact_pricing_optimization:
+        +materialized: table
+        +cluster_by: ["hub", "tier", "strategic_recommendation"]
+
+# Test configurations
+tests:
+  +store_failures: true
+  +severity: error
+
+# Snapshot configurations
+snapshots:
+  hub_monetization_analytics:
+    +target_schema: "snapshots"
+    +strategy: "timestamp"
+    +updated_at: "updated_at"
+
+# Seed configurations
+seeds:
+  hub_monetization_analytics:
+    +quote_columns: false
+    +column_types:
+      customer_id: varchar(50)
+      subscription_id: varchar(50)
+      event_id: varchar(50)
+
+# Documentation
+docs:
+  hub_monetization_analytics:
+    +docs: enable
+
+# Variables for environment-specific configurations
+vars:
+  # Date range for incremental models
+  start_date: '2023-01-01'
+  
+  # Business logic constants
+  high_ltv_threshold: 5000
+  churn_risk_days: 30
+  min_usage_threshold: 5
+  
+  # Data quality thresholds
+  max_acceptable_null_rate: 0.05
+  min_data_freshness_hours: 24
+
+---
