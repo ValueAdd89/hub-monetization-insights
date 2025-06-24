@@ -485,7 +485,7 @@ def create_ios_metric_card(title, value, subtitle="", color_gradient="135deg, #6
 
 # --- Main Dashboard Title ---
 st.title("💸 Hub Monetization Insights Dashboard")
-st.markdown("### Data Mart-Driven Analytics with Geographic Visualization")
+st.markdown("### Data Mart-Driven Analytics")
 
 # Create tabs
 tabs = st.tabs([
